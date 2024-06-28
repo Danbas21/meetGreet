@@ -1,19 +1,26 @@
 import 'package:flutter/material.dart';
 
-class AnimationMain extends StatefulWidget {
+class AnimationMainText extends StatefulWidget {
   final String img;
   final double wiseAnimation;
-  const AnimationMain({
+  final double fontSized;
+  final FontWeight fontWeight;
+  final double letterSpacing;
+
+  const AnimationMainText({
     super.key,
     required this.img,
     required this.wiseAnimation,
+    required this.fontSized,
+    required this.fontWeight,
+    required this.letterSpacing,
   });
 
   @override
   HomePageState createState() => HomePageState();
 }
 
-class HomePageState extends State<AnimationMain>
+class HomePageState extends State<AnimationMainText>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
@@ -67,18 +74,22 @@ class HomePageState extends State<AnimationMain>
   Widget build(
     BuildContext context,
   ) {
+    final double fontSize = widget.fontSized;
+    final FontWeight fontWeight = widget.fontWeight;
+    final double letterSpacing = widget.letterSpacing;
+
     return Stack(
       children: <Widget>[
         AnimatedBuilder(
           animation: _controller,
           builder: (context, child) {
             return Positioned(
-              top: _positionAnimation.value,
-              left: 0,
+              top: 0,
               right: 0,
+              left: _positionAnimation.value,
               child: Container(
-                height: 460,
-                width: 50,
+                height: 80,
+                width: 700,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
@@ -93,7 +104,14 @@ class HomePageState extends State<AnimationMain>
                 ),
                 child: FadeTransition(
                   opacity: _opacityAnimation,
-                  child: Image.asset(widget.img),
+                  child: Text(
+                    widget.img,
+                    style: TextStyle(
+                      fontSize: fontSize,
+                      fontWeight: fontWeight,
+                      letterSpacing: letterSpacing,
+                    ),
+                  ),
                 ),
               ),
             );

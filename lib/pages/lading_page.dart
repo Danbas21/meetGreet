@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_app/pages/desktop_13.dart';
+import 'package:flutter_app/utils/animation_main.dart';
+import 'package:flutter_app/utils/animation_text.dart';
+import 'package:flutter_app/utils/bar_navegacion.dart';
+import 'package:flutter_app/utils/widget_button.dart';
 import 'package:flutter_app/utils/widget_circulo.dart';
 import 'package:flutter_app/utils/widget_grid_cir.dart';
-import 'package:flutter_app/utils/widget_navegacion.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -34,7 +36,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 800,
+            left: 550,
             top: 400,
             child: Container(
               width: 382.46,
@@ -106,45 +108,142 @@ class HomePage extends StatelessWidget {
           ),
           const Positioned(
             top: 340,
-            left: 200,
+            left: -5,
             child: SizedBox(
               width: 700,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "EXPO REFORMA,CDMX 26 - 27 OCTUBRE 2024",
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                      letterSpacing: 4.2,
+                  Positioned(
+                    top: 80,
+                    child: SizedBox(
+                      width: 700,
+                      height: 18,
+                      child: AnimationMainText(
+                          img: "EXPO REFORMA,CDMX 26 - 27 OCTUBRE 2024",
+                          wiseAnimation: -400,
+                          fontSized: 12,
+                          fontWeight: FontWeight.w400,
+                          letterSpacing: 4.2),
                     ),
                   ),
-                  Text(
-                    "MEET & GREET",
-                    style: TextStyle(
-                      fontSize: 60,
-                      fontWeight: FontWeight.w700,
+                  Positioned(
+                    top: 120,
+                    child: SizedBox(
+                      width: 700,
+                      height: 80,
+                      child: AnimationMainText(
+                          img: "MEET & GREET",
+                          wiseAnimation: 400,
+                          fontSized: 65,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 0),
                     ),
-                    textAlign: TextAlign.left,
                   ),
-                  Text(
-                    "EXPERIENCE",
-                    style: TextStyle(
-                      fontSize: 60,
-                      fontWeight: FontWeight.w700,
+                  Positioned(
+                    top: 120,
+                    child: SizedBox(
+                      width: 700,
+                      height: 80,
+                      child: AnimationMainText(
+                          img: "EXPERIENCE",
+                          wiseAnimation: -400,
+                          fontSized: 65,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 0),
                     ),
-                    textAlign: TextAlign.left,
                   ),
-                  Text(
-                    "2024",
-                    style: TextStyle(
-                      fontSize: 60,
-                      fontWeight: FontWeight.w700,
+                  Positioned(
+                    top: 120,
+                    child: SizedBox(
+                      width: 700,
+                      height: 80,
+                      child: AnimationMainText(
+                          img: "2024",
+                          wiseAnimation: 400,
+                          fontSized: 65,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 0),
                     ),
                   ),
                 ],
               ),
+            ),
+          ),
+          const Positioned(
+            left: 800,
+            child: SizedBox(
+              width: 250,
+              height: 730,
+              child: AnimationMain(
+                img: 'assets/images/rectangle_15.png',
+                wiseAnimation: 600,
+              ),
+            ),
+          ),
+          const Positioned(
+            left: 1000,
+            top: 80,
+            child: SizedBox(
+              width: 250,
+              height: 715,
+              child: AnimationMain(
+                img: 'assets/images/rectangle_7.png',
+                wiseAnimation: -600,
+              ),
+            ),
+          ),
+          const Positioned(
+            left: 1200,
+            child: SizedBox(
+              width: 250,
+              height: 715,
+              child: AnimationMain(
+                img: 'assets/images/rectangle_9.png',
+                wiseAnimation: 600,
+              ),
+            ),
+          ),
+          const Positioned(
+            left: 1400,
+            top: 80,
+            child: SizedBox(
+              width: 325,
+              height: 715,
+              child: AnimationMain(
+                img: 'assets/images/rectangle_11.png',
+                wiseAnimation: -600,
+              ),
+            ),
+          ),
+          const Positioned(
+            left: 1250,
+            top: 750,
+            child: SizedBox(
+              width: 145,
+              height: 80,
+              child: CirculosEnGrid(),
+            ),
+          ),
+          const Positioned(
+            left: 250,
+            top: 650,
+            child: SizedBox(
+              width: 200,
+              height: 60,
+              child: ButtonMain(
+                heightB: 15,
+                widthB: 145,
+                title: 'Regístrate ahora',
+              ),
+            ),
+          ),
+          const Positioned(
+            left: 1050,
+            child: SizedBox(
+              width: 700,
+              height: 60,
+              child: BarNaviv(),
             ),
           ),
         ],
