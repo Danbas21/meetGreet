@@ -13,26 +13,35 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 2024,
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height,
       child: Stack(
         children: [
           const Positioned(
             right: -190,
             top: -175.28,
-            child: Circumference(
-              widthC: 570,
-              heightC: 645.04,
-              opacity: 100,
+            child: SizedBox(
+              width: 570,
+              height: 645.04,
+              child: Circumference(
+                widthC: 570,
+                heightC: 645.04,
+                opacity: 100,
+              ),
             ),
           ),
           const Positioned(
             left: -214.11,
             top: 450,
-            child: Circumference(
-              widthC: 528.78,
-              heightC: 571,
-              opacity: 100,
+            child: SizedBox(
+              width: 528.78,
+              height: 571,
+              child: Circumference(
+                widthC: 528.78,
+                heightC: 571,
+                opacity: 100,
+              ),
             ),
           ),
           Positioned(
