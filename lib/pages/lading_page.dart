@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
           ),
           const Positioned(
             left: -214.11,
-            top: 450,
+            bottom: -300,
             child: SizedBox(
               width: 528.78,
               height: 571,

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/contact_page.dart';
+import 'package:flutter_app/pages/lading_page.dart';
+import 'package:flutter_app/pages/lading_page_2.dart';
+import 'package:flutter_app/pages/lading_page_3.dart';
 
 class BarNaviv extends StatelessWidget {
   const BarNaviv({super.key});
@@ -17,7 +21,24 @@ class BarNaviv extends StatelessWidget {
       elevation: 0.1,
       actions: <Widget>[
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const Scaffold(
+                    body: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      HomePage(),
+                      LandingPage2(),
+                      LadingPage3(),
+                    ],
+                  ),
+                )),
+              ),
+            );
+            ;
+          },
           child: const Text(
             'HOME',
             style: TextStyle(
@@ -57,7 +78,14 @@ class BarNaviv extends StatelessWidget {
           ),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ContactPage(),
+              ),
+            );
+          },
           child: const Text(
             'CONTACTO',
             style: TextStyle(

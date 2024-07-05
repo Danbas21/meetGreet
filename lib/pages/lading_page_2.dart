@@ -15,6 +15,19 @@ class LandingPage2 extends StatelessWidget {
       child: Stack(
         children: [
           const Positioned(
+            left: -214.3,
+            top: -288,
+            child: SizedBox(
+              width: 528.78,
+              height: 571,
+              child: Circumference(
+                widthC: 528.78,
+                heightC: 571,
+                opacity: 100,
+              ),
+            ),
+          ),
+          const Positioned(
             right: 50,
             bottom: -450,
             child: SizedBox(
@@ -28,8 +41,8 @@ class LandingPage2 extends StatelessWidget {
             ),
           ),
           const Positioned(
-            left: 60,
-            top: 220,
+            right: 90,
+            top: 290,
             child: SizedBox(
               width: 145,
               height: 80,
@@ -47,15 +60,6 @@ class LandingPage2 extends StatelessWidget {
                 heightC: 645.04,
                 opacity: 100,
               ),
-            ),
-          ),
-          const Positioned(
-            right: 300,
-            bottom: 140,
-            child: SizedBox(
-              width: 145,
-              height: 80,
-              child: CirculosEnGrid(),
             ),
           ),
           Positioned(
@@ -123,7 +127,7 @@ class LandingPage2 extends StatelessWidget {
           ),
           Positioned(
             left: 70,
-            top: 1,
+            top: 50,
             child: Container(
               width: 800,
               height: 300,
@@ -154,21 +158,22 @@ class LandingPage2 extends StatelessWidget {
             ),
           ),
           Positioned(
-              right: 245,
-              bottom: 220,
-              child: Container(
-                width: 400,
-                height: 150,
-                child: const Text(
-                  'Expo Reforma\nAv. Morelos 67, Juárez, Cuauhtémoc,\n06600 Ciudad de México, CDMX',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontFamily: 'Arial',
-                    letterSpacing: 1.5,
-                  ),
+            right: 245,
+            bottom: 220,
+            child: Container(
+              width: 400,
+              height: 150,
+              child: const Text(
+                'Expo Reforma\nAv. Morelos 67, Juárez, Cuauhtémoc,\n06600 Ciudad de México, CDMX',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontFamily: 'Arial',
+                  letterSpacing: 1.5,
                 ),
-              )),
+              ),
+            ),
+          ),
         ],
       ),
     );
