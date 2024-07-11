@@ -4,6 +4,7 @@ import 'package:flutter_app/pages/lading_page.dart';
 import 'package:flutter_app/pages/lading_page_2.dart';
 import 'package:flutter_app/pages/lading_page_3.dart';
 import 'package:flutter_app/pages/whatis_page.dart';
+import 'package:flutter_app/utils/invite_grid.dart';
 
 class BarNaviv extends StatelessWidget {
   const BarNaviv({super.key});
@@ -66,7 +67,14 @@ class BarNaviv extends StatelessWidget {
           ),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ImageGrid(),
+              ),
+            );
+          },
           child: const Text(
             'INVITADOS',
             style: TextStyle(

@@ -1,10 +1,6 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_app/utils/bar_navegacion.dart';
-import 'package:flutter_app/utils/box_text.dart';
-import 'package:flutter_app/utils/checkbox.dart';
-import 'package:flutter_app/utils/widget_button.dart';
+import 'package:flutter_app/utils/list_image.dart';
 import 'package:flutter_app/utils/widget_circulo.dart';
 import 'package:flutter_app/utils/widget_grid_cir.dart';
 
@@ -21,6 +17,7 @@ class WhatisPage extends StatelessWidget {
         con ellos, tomarte una fotos, autograﬁar tu artículo
         preferido y autenticarlo por la empresa líder en
         Estados Unidos BECKETT.''';
+
     return Scaffold(
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
@@ -100,8 +97,8 @@ class WhatisPage extends StatelessWidget {
               ),
             ),
             const Positioned(
-              right: 400,
-              top: 121,
+              left: 160,
+              top: 90,
               child: SizedBox(
                 width: 400,
                 height: 150,
@@ -116,17 +113,6 @@ class WhatisPage extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
-              right: 250,
-              top: 300,
-              child: SizedBox(
-                height: 800,
-                child: Text(pagraph,
-                    style: const TextStyle(
-                      fontSize: 30,
-                    )),
-              ),
-            ),
             const Positioned(
               right: 290,
               bottom: 20,
@@ -137,35 +123,32 @@ class WhatisPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: 350,
-              bottom: 70,
+              right: 60,
+              top: 60,
               child: SizedBox(
-                width: 300,
-                height: 245,
+                width: 1000,
+                height: 310,
                 child: Stack(
                   children: [
                     Positioned(
-                      top: 15,
-                      left: 2,
-                      child: Container(
-                        width: 300,
-                        height: 230,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                              'assets/images/rectangle_5.png',
-                            ),
-                            fit: BoxFit.contain,
-                          ),
-                        ),
-                        child: const Text(
-                          'INVITA',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 46,
-                            fontWeight: FontWeight.bold,
-                          ),
+                      top: 5,
+                      left: 5,
+                      child: SizedBox(
+                        width: 1100,
+                        height: 400,
+                        child: ListView.builder(
+                          itemCount: ListImages.listImage.length,
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) {
+                            return Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: Image.asset(
+                                ListImages.listImage[index],
+                                width: 300.0,
+                                height: 300.0,
+                              ),
+                            );
+                          },
                         ),
                       ),
                     ),
@@ -182,6 +165,19 @@ class WhatisPage extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+              ),
+            ),
+            Positioned(
+              right: 250,
+              bottom: 100,
+              child: SizedBox(
+                height: 400,
+                child: Text(
+                  pagraph,
+                  style: const TextStyle(
+                    fontSize: 30,
+                  ),
                 ),
               ),
             ),
