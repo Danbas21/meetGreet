@@ -13,13 +13,14 @@ class WhatisPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String pagraph =
-        '''Meet & Greet Experience será el primer evento de\nFirma de Autógrafos en todo México donde\n
-                    contaremos con la asistencia de los mejores\n
-                    deportistas en la historia de México, podrás convivir\n
-                    con ellos, tomarte una fotos, autograﬁar tu artículo\n
-                    preferido y autenticarlo por la empresa líder en\n
-                    Estados Unidos BECKETT.''';
+    String pagraph = '''
+        Meet & Greet Experience será el primer evento de 
+        Firma de Autógrafos en todo México donde 
+        contaremos con la asistencia de los mejores
+        deportistas en la historia de México, podrás convivir
+        con ellos, tomarte una fotos, autograﬁar tu artículo
+        preferido y autenticarlo por la empresa líder en
+        Estados Unidos BECKETT.''';
     return Scaffold(
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
@@ -99,11 +100,11 @@ class WhatisPage extends StatelessWidget {
               ),
             ),
             const Positioned(
-              left: 70,
-              top: 50,
+              right: 400,
+              top: 121,
               child: SizedBox(
-                width: 800,
-                height: 300,
+                width: 400,
+                height: 150,
                 child: Text(
                   '¿QUE ES?',
                   style: TextStyle(
@@ -120,11 +121,10 @@ class WhatisPage extends StatelessWidget {
               top: 300,
               child: SizedBox(
                 height: 800,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [Text(pagraph)],
-                ),
+                child: Text(pagraph,
+                    style: const TextStyle(
+                      fontSize: 30,
+                    )),
               ),
             ),
             const Positioned(
@@ -137,39 +137,67 @@ class WhatisPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: 180,
+              right: 350,
               bottom: 70,
               child: SizedBox(
-                width: 400,
-                height: 350,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                width: 300,
+                height: 245,
+                child: Stack(
                   children: [
-                    Container(
-                      width: 170,
-                      height: 45,
-                      child: const Text(
-                        'INVITA',
+                    Positioned(
+                      top: 15,
+                      left: 2,
+                      child: Container(
+                        width: 300,
+                        height: 230,
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage(
+                              'assets/images/rectangle_5.png',
+                            ),
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        child: const Text(
+                          'INVITA',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 46,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const Positioned(
+                      bottom: 30,
+                      left: 70,
+                      child: Text(
+                        '@MANCAVE_AUTOGRAPHS',
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 46,
+                          fontSize: 12,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
-                    Container(
-                      width: 270,
-                      height: 270,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage(
-                            'assets/images/rectangle_5.png',
-                          ),
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                    ),
                   ],
+                ),
+              ),
+            ),
+            Positioned(
+              left: 550,
+              top: 400,
+              child: Container(
+                width: 382.46,
+                height: 600,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(
+                        'assets/images/rectangle_1.png',
+                      ),
+                      fit: BoxFit.fitHeight,
+                      opacity: .25),
                 ),
               ),
             ),
