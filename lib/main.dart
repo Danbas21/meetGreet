@@ -16,16 +16,58 @@ class MyApp extends StatelessWidget {
         primaryColor: const Color.fromARGB(255, 255, 255, 255),
       ),
       title: 'Flutter App',
-      home: const Scaffold(
-          body: SingleChildScrollView(
-        child: Column(
-          children: [
-            HomePage(),
-            LandingPage2(),
-            LadingPage3(),
-          ],
-        ),
-      )),
+      home: ResponsiveHomePage(),
     );
+  }
+}
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: ResponsiveHomePage(),
+//     );
+//   }
+// }
+
+class ResponsiveHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          if (constraints.maxWidth > 600) {
+            return _buildVerticalLayout(context);
+          } else {
+            return _buildHorizontalLayout(context);
+          }
+        },
+      ),
+    );
+  }
+
+  Widget _buildVerticalLayout(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    return const SingleChildScrollView(
+      child: Column(
+        children: [
+          HomePage(),
+          LandingPage2(),
+          LadingPage3(),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildHorizontalLayout(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    return const SingleChildScrollView(
+        child: Row(
+      children: [
+        HomePage(),
+        LandingPage2(),
+        LadingPage3(),
+      ],
+    ));
   }
 }

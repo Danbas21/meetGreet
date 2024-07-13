@@ -8,6 +8,7 @@ environment:
   sdk: ">=3.3.3 <4.0.0"
 
 dependencies:
+  auto_size_text: ^3.0.0
   cupertino_icons: ^1.0.6
   firebase_analytics: ^11.1.0
   firebase_core: ^3.1.1
@@ -47,7 +48,7 @@ flutter:
     - assets/images/rectangle_19.jpeg
     - assets/images/rectangle_17.jpeg
     - assets/images/rectangle_8.jpeg
-    - assets/images/rectangle_2.jpeg
+
     - assets/vectors/vector_2_x2.svg
     - assets/vectors/vector_53_x2.svg
     - assets/vectors/vector_8_x2.svg

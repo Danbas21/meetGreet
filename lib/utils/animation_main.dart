@@ -77,8 +77,8 @@ class HomePageState extends State<AnimationMain>
               left: 0,
               right: 0,
               child: Container(
-                height: 460,
-                width: 50,
+                height: MediaQuery.of(context).size.height * 0.4,
+                width: MediaQuery.of(context).size.width * 0.4,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(

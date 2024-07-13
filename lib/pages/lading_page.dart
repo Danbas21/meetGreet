@@ -56,7 +56,7 @@ class HomePage extends StatelessWidget {
                       'assets/images/rectangle_1.png',
                     ),
                     fit: BoxFit.fitHeight,
-                    opacity: .25),
+                    opacity: .15),
               ),
             ),
           ),
@@ -182,8 +182,8 @@ class HomePage extends StatelessWidget {
           const Positioned(
             left: 800,
             child: SizedBox(
-              width: 250,
-              height: 730,
+              width: 270,
+              height: 830,
               child: AnimationMain(
                 img: 'assets/images/rectangle_15.png',
                 wiseAnimation: 600,
@@ -194,8 +194,8 @@ class HomePage extends StatelessWidget {
             left: 1000,
             top: 80,
             child: SizedBox(
-              width: 250,
-              height: 715,
+              width: 270,
+              height: 830,
               child: AnimationMain(
                 img: 'assets/images/rectangle_7.png',
                 wiseAnimation: -600,
@@ -205,8 +205,8 @@ class HomePage extends StatelessWidget {
           const Positioned(
             left: 1200,
             child: SizedBox(
-              width: 250,
-              height: 715,
+              width: 270,
+              height: 830,
               child: AnimationMain(
                 img: 'assets/images/rectangle_9.png',
                 wiseAnimation: 600,
@@ -217,8 +217,8 @@ class HomePage extends StatelessWidget {
             left: 1400,
             top: 80,
             child: SizedBox(
-              width: 325,
-              height: 715,
+              width: 270,
+              height: 830,
               child: AnimationMain(
                 img: 'assets/images/rectangle_11.png',
                 wiseAnimation: -600,
@@ -226,8 +226,8 @@ class HomePage extends StatelessWidget {
             ),
           ),
           const Positioned(
-            left: 1250,
-            top: 750,
+            left: 1260,
+            top: 850,
             child: SizedBox(
               width: 145,
               height: 80,
@@ -235,7 +235,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
           const Positioned(
-            left: 250,
+            left: 300,
             top: 650,
             child: SizedBox(
               width: 200,

@@ -123,7 +123,7 @@ class LadingPage3 extends StatelessWidget {
                 child: Stack(
                   children: [
                     Positioned(
-                      top: 0,
+                      bottom: 75,
                       left: 0,
                       child: Image.asset(
                         'assets/images/rectangle_6.png',
@@ -132,8 +132,8 @@ class LadingPage3 extends StatelessWidget {
                       ),
                     ),
                     const Positioned(
-                      right: 100,
-                      bottom: 0,
+                      right: 90,
+                      bottom: 50,
                       child: SizedBox(
                         width: 350,
                         height: 50,
@@ -143,7 +143,7 @@ class LadingPage3 extends StatelessWidget {
                             color: Colors.black,
                             fontSize: 30,
                             fontFamily: 'Arial',
-                            fontWeight: FontWeight.w700,
+                            fontWeight: FontWeight.w400,
                             letterSpacing: 1.5,
                           ),
                         ),
@@ -155,8 +155,8 @@ class LadingPage3 extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 600,
-            bottom: 150,
+            left: 500,
+            bottom: 270,
             child: SizedBox(
               width: 500,
               height: 320,
@@ -215,7 +215,7 @@ class LadingPage3 extends StatelessWidget {
                           color: Colors.black,
                           fontSize: 30,
                           fontFamily: 'Arial',
-                          fontWeight: FontWeight.w700,
+                          fontWeight: FontWeight.w400,
                           letterSpacing: 1.5,
                         ),
                       ),
@@ -253,18 +253,18 @@ class LadingPage3 extends StatelessWidget {
                       ),
                     ),
                     const Positioned(
-                      left: 70,
+                      left: 90,
                       bottom: 0,
                       child: SizedBox(
                         width: 400,
                         height: 40,
                         child: Text(
-                          'PRÓXIMOS EVENTOS',
+                          'MEET AND GREET',
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 30,
                             fontFamily: 'Arial',
-                            fontWeight: FontWeight.w700,
+                            fontWeight: FontWeight.w400,
                             letterSpacing: 1.5,
                           ),
                         ),

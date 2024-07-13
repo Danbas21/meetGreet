@@ -19,7 +19,7 @@ class NavigationPageState extends State<NavigationPage> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 100,
+      width: MediaQuery.of(context).size.width,
       child: BottomNavigationBar(
         currentIndex: _indiceActual,
         onTap: _cambiarPagina,

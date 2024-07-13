@@ -88,8 +88,8 @@ class HomePageState extends State<AnimationMainText>
               right: 0,
               left: _positionAnimation.value,
               child: Container(
-                height: 80,
-                width: 700,
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/terminos_page.dart';
 
 class CheckboxWidget extends StatefulWidget {
   const CheckboxWidget({super.key});
@@ -23,12 +24,20 @@ class CheckboxWidgetState extends State<CheckboxWidget> {
             });
           },
         ),
-        const Text(
-          'POR FAVOR REVISE NUESTRA POLITICA DE PRIVACIDAD Y TERMINOS DEL SERVICIO.\nMARQUE SI ESTA DE ACUERDO CON LOS TERMINOS Y CONDICIONES.',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 8,
-            fontFamily: 'Arial',
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const Terminos()),
+            );
+          },
+          child: const Text(
+            'POR FAVOR REVISE NUESTRA POLITICA DE PRIVACIDAD Y TERMINOS DEL SERVICIO.\nMARQUE SI ESTA DE ACUERDO CON LOS TERMINOS Y CONDICIONES.',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 8,
+              fontFamily: 'Arial',
+            ),
           ),
         ),
       ],

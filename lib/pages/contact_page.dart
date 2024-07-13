@@ -133,8 +133,8 @@ class ContactPage extends StatelessWidget {
               ),
             ),
             const Positioned(
-              right: 525,
-              bottom: 265,
+              right: 500,
+              bottom: 515,
               child: SizedBox(
                 width: 400,
                 height: 150,

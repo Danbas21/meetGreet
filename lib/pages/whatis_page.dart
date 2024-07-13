@@ -81,7 +81,7 @@ class WhatisPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 240,
+              left: 150,
               top: 200,
               child: Container(
                 width: 600,
@@ -170,7 +170,7 @@ class WhatisPage extends StatelessWidget {
             ),
             Positioned(
               right: 250,
-              bottom: 100,
+              bottom: 300,
               child: SizedBox(
                 height: 400,
                 child: Text(
@@ -183,7 +183,7 @@ class WhatisPage extends StatelessWidget {
             ),
             Positioned(
               left: 550,
-              top: 400,
+              bottom: 0,
               child: Container(
                 width: 382.46,
                 height: 600,
@@ -193,7 +193,7 @@ class WhatisPage extends StatelessWidget {
                         'assets/images/rectangle_1.png',
                       ),
                       fit: BoxFit.fitHeight,
-                      opacity: .25),
+                      opacity: .15),
                 ),
               ),
             ),

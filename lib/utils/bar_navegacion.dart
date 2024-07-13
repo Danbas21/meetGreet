@@ -1,5 +1,7 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/contact_page.dart';
+import 'package:flutter_app/pages/invite_page.dart';
 import 'package:flutter_app/pages/lading_page.dart';
 import 'package:flutter_app/pages/lading_page_2.dart';
 import 'package:flutter_app/pages/lading_page_3.dart';
@@ -71,11 +73,11 @@ class BarNaviv extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => ImageGrid(),
+                builder: (context) => ListInvites(),
               ),
             );
           },
-          child: const Text(
+          child: const AutoSizeText(
             'INVITADOS',
             style: TextStyle(
               color: Colors.black,
