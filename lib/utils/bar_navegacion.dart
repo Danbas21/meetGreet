@@ -41,7 +41,6 @@ class BarNaviv extends StatelessWidget {
                 )),
               ),
             );
-            ;
           },
           child: const Text(
             'HOME',
@@ -73,7 +72,7 @@ class BarNaviv extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => ListInvites(),
+                builder: (context) => const ListInvites(),
               ),
             );
           },

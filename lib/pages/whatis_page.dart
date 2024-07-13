@@ -14,7 +14,7 @@ class WhatisPage extends StatelessWidget {
         Firma de Autógrafos en todo México donde 
         contaremos con la asistencia de los mejores
         deportistas en la historia de México, podrás convivir
-        con ellos, tomarte una fotos, autograﬁar tu artículo
+        con ellos, tomarte una fotos, autografiar tu artículo
         preferido y autenticarlo por la empresa líder en
         Estados Unidos BECKETT.''';
 
