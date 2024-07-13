@@ -41,4 +41,10 @@ class ListImages {
     'assets/images/estre/estre7.png',
     'assets/images/estre/estre8.png',
   ];
+  static List<String> listSchedule = [
+    'assets/images/horarios1.jpg',
+  ];
+  static List<String> listSchedule1 = [
+    'assets/images/horarios2.jpg',
+  ];
 }

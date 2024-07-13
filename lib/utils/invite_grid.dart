@@ -30,6 +30,36 @@ class ImageGrid extends StatelessWidget {
   }
 }
 
+class ImageGrid1 extends StatelessWidget {
+  final List<String> images;
+
+  const ImageGrid1({super.key, required this.images});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      child: GridView.builder(
+        padding: const EdgeInsets.all(10),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount:
+              images.length <= 5 ? images.length : images.length ~/ 2,
+          crossAxisSpacing: 28,
+          mainAxisSpacing: 28,
+        ),
+        itemCount: images.length,
+        itemBuilder: (context, index) {
+          return HoverContainer(
+            child: Image.network(
+              images[index % images.length],
+              fit: BoxFit.contain,
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
 class HoverContainer extends StatefulWidget {
   final Widget child;
 

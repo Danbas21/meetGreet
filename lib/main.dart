@@ -49,7 +49,6 @@ class ResponsiveHomePage extends StatelessWidget {
   }
 
   Widget _buildVerticalLayout(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
     return const SingleChildScrollView(
       child: Column(
         children: [
@@ -62,7 +61,6 @@ class ResponsiveHomePage extends StatelessWidget {
   }
 
   Widget _buildHorizontalLayout(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
     return const SingleChildScrollView(
         child: Row(
       children: [

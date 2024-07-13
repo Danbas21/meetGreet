@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:flutter_app/utils/widget_circulo.dart';
 import 'package:flutter_app/utils/widget_grid_cir.dart';
 
@@ -9,7 +8,7 @@ class LandingPage2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       child: Stack(
@@ -125,13 +124,13 @@ class LandingPage2 extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             left: 70,
             top: 50,
-            child: Container(
+            child: SizedBox(
               width: 800,
               height: 300,
-              child: const Text(
+              child: Text(
                 'VENTA DE BOLETOS',
                 style: TextStyle(
                   color: Colors.black,
@@ -157,13 +156,13 @@ class LandingPage2 extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             right: 245,
             bottom: 220,
-            child: Container(
+            child: SizedBox(
               width: 400,
               height: 150,
-              child: const Text(
+              child: Text(
                 'Expo Reforma\nAv. Morelos 67, Juárez, Cuauhtémoc,\n06600 Ciudad de México, CDMX',
                 style: TextStyle(
                   color: Colors.black,

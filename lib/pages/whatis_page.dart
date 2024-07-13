@@ -9,14 +9,8 @@ class WhatisPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String pagraph = '''
-        Meet & Greet Experience será el primer evento de 
-        Firma de Autógrafos en todo México donde 
-        contaremos con la asistencia de los mejores
-        deportistas en la historia de México, podrás convivir
-        con ellos, tomarte una fotos, autografiar tu artículo
-        preferido y autenticarlo por la empresa líder en
-        Estados Unidos BECKETT.''';
+    String paragraph =
+        '''Meet & Greet Experience será el primer evento de firma de autógrafos en todo México, donde contaremos con la asistencia de los mejores deportistas en la historia de México. Podrás convivir con ellos, tomarte una foto, firmar tu artículo y autenticarlo con la empresa líder en Estados Unidos, BECKETT.''';
 
     return Scaffold(
       body: SizedBox(
@@ -152,32 +146,34 @@ class WhatisPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const Positioned(
-                      bottom: 30,
-                      left: 70,
-                      child: Text(
-                        '@MANCAVE_AUTOGRAPHS',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
                   ],
                 ),
               ),
             ),
             Positioned(
               right: 250,
-              bottom: 300,
+              bottom: 200,
               child: SizedBox(
+                width: 800,
                 height: 400,
                 child: Text(
-                  pagraph,
+                  paragraph,
+                  textAlign: TextAlign.left,
                   style: const TextStyle(
                     fontSize: 30,
                   ),
+                ),
+              ),
+            ),
+            const Positioned(
+              bottom: 300,
+              right: 250,
+              child: Text(
+                '@MANCAVE_AUTOGRAPHS',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),

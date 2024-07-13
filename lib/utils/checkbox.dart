@@ -31,16 +31,42 @@ class CheckboxWidgetState extends State<CheckboxWidget> {
               MaterialPageRoute(builder: (context) => const Terminos()),
             );
           },
-          child: const Text(
-            'POR FAVOR REVISE NUESTRA POLITICA DE PRIVACIDAD Y TERMINOS DEL SERVICIO.\nMARQUE SI ESTA DE ACUERDO CON LOS TERMINOS Y CONDICIONES.',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 8,
-              fontFamily: 'Arial',
-            ),
-          ),
+          child: const HoverText(
+              text:
+                  'POR FAVOR REVISE NUESTRA POLÍTICA DE PRIVACIDAD Y TÉRMINOS DEL SERVICIO.\nMARQUE SI ESTA DE ACUERDO CON LOS TÉRMINOS Y CONDICIONES.'),
         ),
       ],
+    );
+  }
+}
+
+class HoverText extends StatefulWidget {
+  final String text;
+
+  const HoverText({super.key, required this.text});
+
+  @override
+  HoverTextState createState() => HoverTextState();
+}
+
+class HoverTextState extends State<HoverText> {
+  bool _isHovered = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (_) => setState(() => _isHovered = true),
+      onExit: (_) => setState(() => _isHovered = false),
+      cursor: SystemMouseCursors.grabbing,
+      child: Text(
+        widget.text,
+        style: TextStyle(
+          decoration: TextDecoration.underline,
+          color: _isHovered ? Colors.blue : Colors.black,
+          fontWeight: _isHovered ? FontWeight.bold : FontWeight.normal,
+          fontSize: 8,
+        ),
+      ),
     );
   }
 }
