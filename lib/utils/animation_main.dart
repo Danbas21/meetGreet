@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/utils/screen_utils.dart';
 
 class AnimationMain extends StatefulWidget {
   final String img;
@@ -73,30 +74,30 @@ class HomePageState extends State<AnimationMain>
           animation: _controller,
           builder: (context, child) {
             return Positioned(
-              top: _positionAnimation.value,
-              left: 0,
-              right: 0,
-              child: Container(
-                height: MediaQuery.of(context).size.height * 0.4,
-                width: MediaQuery.of(context).size.width * 0.4,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      blurStyle: BlurStyle.normal,
-                      spreadRadius: 2,
-                      color: const Color.fromARGB(255, 196, 228, 243)
-                          .withOpacity(0.5),
-                      blurRadius: 250,
-                      offset: const Offset(26, 26),
+                top: _positionAnimation.value,
+                left: 0,
+                right: 0,
+                child: Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        blurStyle: BlurStyle.normal,
+                        spreadRadius: 2,
+                        color: const Color.fromARGB(255, 196, 228, 243)
+                            .withOpacity(0.5),
+                        blurRadius: 250,
+                        offset: const Offset(26, 26),
+                      ),
+                    ],
+                  ),
+                  child: FadeTransition(
+                    opacity: _opacityAnimation,
+                    child: Image.asset(
+                      widget.img,
+                      fit: BoxFit.fill,
                     ),
-                  ],
-                ),
-                child: FadeTransition(
-                  opacity: _opacityAnimation,
-                  child: Image.asset(widget.img),
-                ),
-              ),
-            );
+                  ),
+                ));
           },
         ),
       ],

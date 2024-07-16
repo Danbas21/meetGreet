@@ -1,145 +1,142 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/utils/bar_navegacion.dart';
 import 'package:flutter_app/utils/list_image.dart';
+import 'package:flutter_app/utils/screen_utils.dart';
 import 'package:flutter_app/utils/widget_circulo.dart';
 import 'package:flutter_app/utils/widget_grid_cir.dart';
 
-class WhatisPage extends StatelessWidget {
-  const WhatisPage({super.key});
+class WhatIsPage extends StatelessWidget {
+  const WhatIsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
     String paragraph =
         '''Meet & Greet Experience será el primer evento de firma de autógrafos en todo México, donde contaremos con la asistencia de los mejores deportistas en la historia de México. Podrás convivir con ellos, tomarte una foto, firmar tu artículo y autenticarlo con la empresa líder en Estados Unidos, BECKETT.''';
-
+    double multiplier = ResponsiveUtil.getMultiplier(context);
     return Scaffold(
       body: SizedBox(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
+        width: width,
+        height: height,
         child: Stack(
           children: [
-            const Positioned(
-              left: 1050,
+            Positioned(
+              left: -214 * multiplier,
+              top: -288 * multiplier,
               child: SizedBox(
-                width: 700,
-                height: 60,
-                child: BarNaviv(),
-              ),
-            ),
-            const Positioned(
-              left: -214.3,
-              top: -288,
-              child: SizedBox(
-                width: 528.78,
-                height: 571,
+                width: 528 * multiplier,
+                height: 571 * multiplier,
                 child: Circumference(
-                  widthC: 528.78,
-                  heightC: 571,
+                  widthC: 528 * multiplier,
+                  heightC: 571 * multiplier,
                   opacity: 100,
                 ),
               ),
             ),
-            const Positioned(
-              right: 50,
-              bottom: -450,
+            Positioned(
+              right: 50 * multiplier,
+              bottom: -450 * multiplier,
               child: SizedBox(
-                width: 950,
-                height: 950,
+                width: 950 * multiplier,
+                height: 950 * multiplier,
                 child: Circumference2(
-                  widthC: 900,
-                  heightC: 900,
+                  widthC: 900 * multiplier,
+                  heightC: 900 * multiplier,
                   opacity: 100,
                 ),
               ),
             ),
-            const Positioned(
-              left: 90,
-              top: 290,
+            Positioned(
+              left: 90 * multiplier,
+              top: 290 * multiplier,
               child: SizedBox(
-                width: 120,
-                height: 65,
-                child: CirculosEnGrid(),
+                width: 120 * multiplier,
+                height: 65 * multiplier,
+                child: const CirculosEnGrid(),
               ),
             ),
-            const Positioned(
-              left: -300,
-              top: 700,
+            Positioned(
+              left: -300 * multiplier,
+              top: 700 * multiplier,
               child: SizedBox(
-                width: 500,
-                height: 500,
+                width: 500 * multiplier,
+                height: 500 * multiplier,
                 child: Circumference(
-                  widthC: 700,
-                  heightC: 645.04,
+                  widthC: 700 * multiplier,
+                  heightC: 645 * multiplier,
                   opacity: 200,
                 ),
               ),
             ),
             Positioned(
-              left: 150,
-              top: 200,
+              left: 150 * multiplier,
+              bottom: multiplier == 1.0 ? 180 * multiplier : 700 * multiplier,
               child: Container(
-                width: 600,
-                height: 600,
+                width: 600 * multiplier,
+                height: 600 * multiplier,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
                       'assets/images/rectangle_16.png',
                     ),
-                    fit: BoxFit.fitHeight,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
             ),
-            const Positioned(
-              left: 160,
-              top: 90,
+            Positioned(
+              left: 160 * multiplier,
+              top: 90 * multiplier,
               child: SizedBox(
-                width: 400,
-                height: 150,
+                width: 400 * multiplier,
+                height: 150 * multiplier,
                 child: Text(
                   '¿QUE ES?',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 75,
+                    fontSize: 75 * multiplier,
                     fontFamily: 'Arial',
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
             ),
-            const Positioned(
-              right: 290,
-              bottom: 20,
+            Positioned(
+              right: 290 * multiplier,
+              bottom: 20 * multiplier,
               child: SizedBox(
-                width: 120,
-                height: 65,
-                child: CirculosEnGrid(),
+                width: 120 * multiplier,
+                height: 65 * multiplier,
+                child: const CirculosEnGrid(),
               ),
             ),
             Positioned(
               right: 60,
               top: 60,
               child: SizedBox(
-                width: 1000,
-                height: 310,
+                width: width * multiplier,
+                height: 310 * multiplier,
                 child: Stack(
                   children: [
                     Positioned(
-                      top: 5,
-                      left: 5,
+                      top: 5 * multiplier,
+                      right: 0 * multiplier,
+                      left: 0 * multiplier,
                       child: SizedBox(
-                        width: 1100,
-                        height: 400,
+                        width: width / 3,
+                        height: 400 * multiplier,
                         child: ListView.builder(
                           itemCount: ListImages.listImage.length,
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (context, index) {
                             return Padding(
-                              padding: const EdgeInsets.all(2.0),
+                              padding: const EdgeInsets.all(2.0) * multiplier,
                               child: Image.asset(
                                 ListImages.listImage[index],
-                                width: 300.0,
-                                height: 300.0,
+                                width: 400 * multiplier,
+                                height: 400 * multiplier,
+                                fit: BoxFit.contain,
                               ),
                             );
                           },
@@ -151,38 +148,38 @@ class WhatisPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: 250,
-              bottom: 200,
+              right: 100 * multiplier,
+              bottom: 200 * multiplier,
               child: SizedBox(
-                width: 800,
-                height: 400,
+                width: 800 * multiplier,
+                height: 400 * multiplier,
                 child: Text(
                   paragraph,
                   textAlign: TextAlign.left,
-                  style: const TextStyle(
-                    fontSize: 30,
+                  style: TextStyle(
+                    fontSize: 30 * multiplier,
                   ),
                 ),
               ),
             ),
-            const Positioned(
-              bottom: 300,
-              right: 250,
+            Positioned(
+              bottom: 300 * multiplier,
+              right: 250 * multiplier,
               child: Text(
                 '@MANCAVE_AUTOGRAPHS',
                 style: TextStyle(
                   color: Colors.black,
-                  fontSize: 12,
+                  fontSize: 12 * multiplier,
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
             Positioned(
-              left: 550,
-              bottom: 0,
+              left: 550 * multiplier,
+              bottom: 0 * multiplier,
               child: Container(
-                width: 382.46,
-                height: 600,
+                width: 382 * multiplier,
+                height: 600 * multiplier,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(
@@ -191,6 +188,15 @@ class WhatisPage extends StatelessWidget {
                       fit: BoxFit.fitHeight,
                       opacity: .15),
                 ),
+              ),
+            ),
+            Positioned(
+              right: 50 * multiplier,
+              top: 0 * multiplier,
+              child: SizedBox(
+                width: 900 * multiplier,
+                height: 70 * multiplier,
+                child: const BarNaviv(),
               ),
             ),
           ],

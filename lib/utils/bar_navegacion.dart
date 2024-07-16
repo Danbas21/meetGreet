@@ -7,19 +7,21 @@ import 'package:flutter_app/pages/lading_page_2.dart';
 import 'package:flutter_app/pages/lading_page_3.dart';
 import 'package:flutter_app/pages/schedule_page.dart';
 import 'package:flutter_app/pages/whatis_page.dart';
+import 'package:flutter_app/utils/screen_utils.dart';
 
 class BarNaviv extends StatelessWidget {
   const BarNaviv({super.key});
 
   @override
   Widget build(BuildContext context) {
+    double multiplier = ResponsiveUtil.getMultiplier(context);
     return AppBar(
       automaticallyImplyLeading: true,
       backgroundColor: WidgetStateColor.transparent,
-      shape: const RoundedRectangleBorder(
+      shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(20),
-          bottomRight: Radius.circular(20),
+          bottomLeft: const Radius.circular(20) * multiplier,
+          bottomRight: const Radius.circular(20) * multiplier,
         ),
       ),
       elevation: 0.1,
@@ -42,11 +44,11 @@ class BarNaviv extends StatelessWidget {
               ),
             );
           },
-          child: const Text(
+          child: Text(
             'HOME',
             style: TextStyle(
               color: Colors.black,
-              fontSize: 20,
+              fontSize: 20 * multiplier,
             ),
           ),
         ),
@@ -55,15 +57,15 @@ class BarNaviv extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const WhatisPage(),
+                builder: (context) => const WhatIsPage(),
               ),
             );
           },
-          child: const Text(
+          child: Text(
             '¿QUE ES?',
             style: TextStyle(
               color: Colors.black,
-              fontSize: 20,
+              fontSize: 20 * multiplier,
             ),
           ),
         ),
@@ -76,11 +78,11 @@ class BarNaviv extends StatelessWidget {
               ),
             );
           },
-          child: const AutoSizeText(
+          child: Text(
             'INVITADOS',
             style: TextStyle(
               color: Colors.black,
-              fontSize: 20,
+              fontSize: 20 * multiplier,
             ),
           ),
         ),
@@ -93,11 +95,11 @@ class BarNaviv extends StatelessWidget {
               ),
             );
           },
-          child: const Text(
+          child: Text(
             'HORARIOS',
             style: TextStyle(
               color: Colors.black,
-              fontSize: 20,
+              fontSize: 20 * multiplier,
             ),
           ),
         ),
@@ -110,11 +112,11 @@ class BarNaviv extends StatelessWidget {
               ),
             );
           },
-          child: const Text(
+          child: Text(
             'CONTACTO',
             style: TextStyle(
               color: Colors.black,
-              fontSize: 20,
+              fontSize: 20 * multiplier,
             ),
           ),
         ),

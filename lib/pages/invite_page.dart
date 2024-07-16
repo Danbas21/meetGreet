@@ -234,31 +234,6 @@ class ListInvites extends StatelessWidget {
                         height: 1050,
                         child: ImageGrid(images: ListImages.listEstre),
                       ),
-                      const SizedBox(
-                        width: 600,
-                        height: 80,
-                        child: Text(
-                          "Horarios de Eventos",
-                          style: TextStyle(
-                            fontSize: 60,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                      Center(
-                        child: SizedBox(
-                          width: 1100,
-                          height: 850,
-                          child: ImageGrid1(images: ListImages.listSchedule),
-                        ),
-                      ),
-                      Center(
-                        child: SizedBox(
-                          width: 1100,
-                          height: 600,
-                          child: ImageGrid1(images: ListImages.listSchedule1),
-                        ),
-                      ),
                     ],
                   ),
                 ),

@@ -95,7 +95,7 @@ class ContactPage extends StatelessWidget {
               child: ButtonMain(
                 widthB: 200,
                 heightB: 50,
-                title: 'REGISTRATE',
+                title: 'REGÍSTRATE',
               ),
             ),
             const Positioned(
@@ -122,7 +122,7 @@ class ContactPage extends StatelessWidget {
                 width: 400,
                 height: 150,
                 child: Text(
-                  'MANTENTE INFORMADO.\nSE DE LOS PRIMEROS EN SABER DE\nNUESTROS PROXIMOS EVENTOS.',
+                  'MANTENTE INFORMADO.\nSE DE LOS PRIMEROS EN SABER DE\nNUESTROS PRÓXIMOS EVENTOS.',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 20,
@@ -181,7 +181,7 @@ class ContactPage extends StatelessWidget {
                           width: 50,
                         ),
                         BoxText(
-                          labelText: 'CORREO ELECTRONICO',
+                          labelText: 'CORREO ELECTRÓNICO',
                           widthText: 300,
                           heightText: 75,
                         ),

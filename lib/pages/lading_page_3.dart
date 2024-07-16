@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/utils/hover_animation.dart';
+import 'package:flutter_app/utils/screen_utils.dart';
 import 'package:flutter_app/utils/widget_circulo.dart';
 import 'package:flutter_app/utils/widget_grid_cir.dart';
 
@@ -8,35 +9,39 @@ class LadingPage3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+    double multiplier = ResponsiveUtil.getMultiplier(context);
     return SizedBox(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
+      width: width,
+      height: height * multiplier,
       child: Stack(
         children: [
-          const Positioned(
-            right: 50,
-            top: -500,
+          Positioned(
+            right: 50 * multiplier,
+            top: -470 * multiplier,
+            left: 230 * multiplier,
             child: SizedBox(
-              width: 950,
-              height: 950,
+              width: 950 * multiplier,
+              height: 950 * multiplier,
               child: Circumference2(
-                widthC: 900,
-                heightC: 900,
+                widthC: 900 * multiplier,
+                heightC: 900 * multiplier,
                 opacity: 100,
               ),
             ),
           ),
           Positioned(
-            left: 10,
-            top: 10,
+            left: 10 * multiplier,
+            top: 10 * multiplier,
             child: SizedBox(
-              width: 350,
-              height: 150,
+              width: 350 * multiplier,
+              height: 150 * multiplier,
               child: Stack(
                 children: [
                   Container(
-                    width: 150,
-                    height: 150,
+                    width: 150 * multiplier,
+                    height: 150 * multiplier,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
@@ -46,22 +51,22 @@ class LadingPage3 extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const Positioned(
-                    left: 135,
-                    top: 55,
+                  Positioned(
+                    left: 135 * multiplier,
+                    top: 55 * multiplier,
                     child: Column(
                       children: [
                         Text(
                           "MEET & GREET",
                           style: TextStyle(
-                            fontSize: 14.278368949890137,
+                            fontSize: 14 * multiplier,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
                         Text(
                           "EXPERIENCE 2024",
                           style: TextStyle(
-                            fontSize: 14.278368949890137,
+                            fontSize: 14 * multiplier,
                             fontWeight: FontWeight.w700,
                           ),
                         )
@@ -72,49 +77,49 @@ class LadingPage3 extends StatelessWidget {
               ),
             ),
           ),
-          const Positioned(
-            left: -300,
-            bottom: -300,
+          Positioned(
+            left: -300 * multiplier,
+            bottom: -300 * multiplier,
             child: SizedBox(
-              width: 750,
-              height: 750,
+              width: 750 * multiplier,
+              height: 750 * multiplier,
               child: Circumference2(
-                widthC: 900,
-                heightC: 900,
+                widthC: 900 * multiplier,
+                heightC: 900 * multiplier,
                 opacity: 100,
               ),
             ),
           ),
-          const Positioned(
-            left: 50,
-            bottom: 100,
+          Positioned(
+            right: 450 * multiplier,
+            bottom: 100 * multiplier,
             child: SizedBox(
-              width: 145,
-              height: 80,
-              child: CirculosEnGrid(),
-            ),
-          ),
-          const Positioned(
-            right: 430,
-            top: 120,
-            child: SizedBox(
-              width: 145,
-              height: 80,
-              child: CirculosEnGrid(),
+              width: 145 * multiplier,
+              height: 80 * multiplier,
+              child: const CirculosEnGrid(),
             ),
           ),
           Positioned(
-            right: 150,
-            bottom: 100,
+            right: 430 * multiplier,
+            top: 120 * multiplier,
+            child: SizedBox(
+              width: 145 * multiplier,
+              height: 80 * multiplier,
+              child: const CirculosEnGrid(),
+            ),
+          ),
+          Positioned(
+            right: 0 * multiplier,
+            bottom: 150 * multiplier,
             child: Container(
-              width: 500,
-              height: 270,
-              decoration: const BoxDecoration(
+              width: 450 * multiplier,
+              height: 300 * multiplier,
+              decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
-                    color: Color.fromARGB(5, 0, 0, 0),
-                    offset: Offset(0, 20),
-                    blurRadius: 50,
+                    color: const Color.fromARGB(5, 0, 0, 0),
+                    offset: const Offset(0, 20),
+                    blurRadius: 50 * multiplier,
                   ),
                 ],
               ),
@@ -122,25 +127,25 @@ class LadingPage3 extends StatelessWidget {
                 child: Stack(
                   children: [
                     Positioned(
-                      bottom: 75,
-                      left: 0,
+                      bottom: 75 * multiplier,
+                      left: 0 * multiplier,
                       child: Image.asset(
                         'assets/images/rectangle_6.png',
                         fit: BoxFit.values[1],
-                        height: 250,
+                        height: 250 * multiplier,
                       ),
                     ),
-                    const Positioned(
-                      right: 90,
-                      bottom: 50,
+                    Positioned(
+                      right: 90 * multiplier,
+                      bottom: 30 * multiplier,
                       child: SizedBox(
-                        width: 350,
-                        height: 50,
+                        width: 350 * multiplier,
+                        height: 100 * multiplier,
                         child: Text(
                           'PRÓXIMOS EVENTOS',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 30,
+                            fontSize: 30 * multiplier,
                             fontFamily: 'Arial',
                             fontWeight: FontWeight.w400,
                             letterSpacing: 1.5,
@@ -154,46 +159,46 @@ class LadingPage3 extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 500,
-            bottom: 270,
+            left: 40 * multiplier,
+            bottom: 0 * multiplier,
             child: SizedBox(
-              width: 500,
-              height: 320,
+              width: 500 * multiplier,
+              height: 320 * multiplier,
               child: Stack(
                 children: [
                   Positioned(
-                    left: 60,
-                    top: 0,
+                    left: 60 * multiplier,
+                    top: 0 * multiplier,
                     child: SizedBox(
-                      width: 250,
-                      height: 250,
+                      width: 250 * multiplier,
+                      height: 250 * multiplier,
                       child: HoverContainer(
                         child: Image.asset('assets/images/rectangle_3.png'),
                       ),
                     ),
                   ),
                   Positioned(
-                    right: 40,
-                    top: 15,
+                    right: 40 * multiplier,
+                    top: 15 * multiplier,
                     child: SizedBox(
-                      width: 270,
-                      height: 270,
+                      width: 270 * multiplier,
+                      height: 270 * multiplier,
                       child: HoverContainer(
                         child: Image.asset('assets/images/rectangle_4.png'),
                       ),
                     ),
                   ),
                   Positioned(
-                    left: 80,
-                    top: 10,
+                    left: 80 * multiplier,
+                    top: 10 * multiplier,
                     child: SizedBox(
-                      width: 290,
-                      height: 290,
+                      width: 290 * multiplier,
+                      height: 290 * multiplier,
                       child: HoverContainer(
                         child: Image.asset(
                           'assets/images/e9b4486e5cb972cdb482690080dfcd70.png',
-                          height: 290,
-                          width: 290,
+                          height: 290 * multiplier,
+                          width: 290 * multiplier,
                         ),
                       ),
                     ),
@@ -202,17 +207,17 @@ class LadingPage3 extends StatelessWidget {
                     left: 0,
                     bottom: 0,
                     child: SizedBox(
-                      width: 350,
-                      height: 90,
+                      width: 350 * multiplier,
+                      height: 90 * multiplier,
                       child: Text(
-                        'ARTICULOS\nCOLECCIONABLES',
+                        'ARTÍCULOS\nCOLECCIONABLES',
                         textAlign: TextAlign.start,
                         style: TextStyle(
                           fontStyle: FontStyle.italic,
                           background: Paint()
                             ..color = const Color.fromARGB(99, 234, 241, 242),
                           color: Colors.black,
-                          fontSize: 30,
+                          fontSize: 30 * multiplier,
                           fontFamily: 'Arial',
                           fontWeight: FontWeight.w400,
                           letterSpacing: 1.5,
@@ -225,20 +230,20 @@ class LadingPage3 extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 150,
-            top: 140,
+            left: 40 * multiplier,
+            top: 150 * multiplier,
             child: SizedBox(
-              width: 500,
-              height: 370,
+              width: 500 * multiplier,
+              height: 370 * multiplier,
               child: HoverContainer(
                 child: Stack(
                   children: [
                     Positioned(
-                      left: 0,
-                      top: 0,
+                      left: 0 * multiplier,
+                      top: 0 * multiplier,
                       child: Container(
-                        width: 500,
-                        height: 350,
+                        width: 500 * multiplier,
+                        height: 350 * multiplier,
                         decoration: const BoxDecoration(
                           boxShadow: [
                             BoxShadow(
@@ -251,17 +256,17 @@ class LadingPage3 extends StatelessWidget {
                         child: Image.asset('assets/images/rectangle_20.jpeg'),
                       ),
                     ),
-                    const Positioned(
-                      left: 90,
-                      bottom: 0,
+                    Positioned(
+                      left: 90 * multiplier,
+                      bottom: 0 * multiplier,
                       child: SizedBox(
-                        width: 400,
-                        height: 40,
+                        width: 400 * multiplier,
+                        height: 40 * multiplier,
                         child: Text(
                           'MEET AND GREET',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 30,
+                            fontSize: 30 * multiplier,
                             fontFamily: 'Arial',
                             fontWeight: FontWeight.w400,
                             letterSpacing: 1.5,

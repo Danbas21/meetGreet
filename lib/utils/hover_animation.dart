@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/utils/screen_utils.dart';
 
 class HoverContainer extends StatefulWidget {
   final Widget child;
@@ -14,6 +15,7 @@ class HoverContainerState extends State<HoverContainer> {
 
   @override
   Widget build(BuildContext context) {
+    double multiplier = ResponsiveUtil.getMultiplier(context);
     return MouseRegion(
       onEnter: (_) => setState(() => _isHovered = true),
       onExit: (_) => setState(() => _isHovered = false),

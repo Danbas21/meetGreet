@@ -60,9 +60,10 @@ class HomePageState extends State<AnimationMainText>
     super.didChangeDependencies();
 
     _positionAnimation = Tween<double>(
-      begin: widget.wiseAnimation,
-      end: MediaQuery.of(context).size.height / 4,
-    ).animate(
+            begin: widget.wiseAnimation,
+            end: 0 //MediaQuery.of(context).size.height / 4,
+            )
+        .animate(
       CurvedAnimation(
         parent: _controller,
         curve: Curves.easeInOut,
@@ -87,25 +88,12 @@ class HomePageState extends State<AnimationMainText>
               top: 0,
               right: 0,
               left: _positionAnimation.value,
-              child: Container(
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      blurStyle: BlurStyle.normal,
-                      spreadRadius: 2,
-                      color: const Color.fromARGB(255, 196, 228, 243)
-                          .withOpacity(0.5),
-                      blurRadius: 250,
-                      offset: const Offset(26, 26),
-                    ),
-                  ],
-                ),
+              child: SizedBox(
                 child: FadeTransition(
                   opacity: _opacityAnimation,
                   child: Text(
                     widget.img,
+                    textAlign: TextAlign.left,
                     style: TextStyle(
                       fontSize: fontSize,
                       fontWeight: fontWeight,
@@ -119,17 +107,6 @@ class HomePageState extends State<AnimationMainText>
         ),
       ],
     );
-    // floatingActionButton:
-    // FloatingActionButton(
-    //   onPressed: () {
-    //     if (_controller.status == AnimationStatus.completed) {
-    //       _controller.reverse();
-    //     } else {
-    //       _controller.forward();
-    //     }
-    //   },
-    //   child: const Icon(Icons.play_arrow),
-    // );
   }
 
   @override

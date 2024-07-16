@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_app/utils/animation_main.dart';
 import 'package:flutter_app/utils/animation_text.dart';
 import 'package:flutter_app/utils/bar_navegacion.dart';
+import 'package:flutter_app/utils/screen_utils.dart';
 import 'package:flutter_app/utils/widget_button.dart';
 import 'package:flutter_app/utils/widget_circulo.dart';
 import 'package:flutter_app/utils/widget_grid_cir.dart';
@@ -12,73 +13,88 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+    double multiplier = ResponsiveUtil.getMultiplier(context);
+
     return SizedBox(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
+      width: width,
+      height: height * multiplier,
       child: Stack(
         children: [
-          const Positioned(
-            right: -190,
-            top: -175.28,
+          Positioned(
+            right: -190 * multiplier,
+            top: -175.28 * multiplier,
             child: SizedBox(
-              width: 570,
-              height: 645.04,
+              width: 570 * multiplier,
+              height: 645.04 * multiplier,
               child: Circumference(
-                widthC: 570,
-                heightC: 645.04,
-                opacity: 100,
-              ),
-            ),
-          ),
-          const Positioned(
-            left: -214.11,
-            bottom: -300,
-            child: SizedBox(
-              width: 528.78,
-              height: 571,
-              child: Circumference(
-                widthC: 528.78,
-                heightC: 571,
+                widthC: 570 * multiplier,
+                heightC: 645.04 * multiplier,
                 opacity: 100,
               ),
             ),
           ),
           Positioned(
-            left: 550,
-            top: 400,
+            left: -214.11 * multiplier,
+            bottom: -300 * multiplier,
+            child: SizedBox(
+              width: 528.78 * multiplier,
+              height: 571 * multiplier,
+              child: Circumference(
+                widthC: 528.78 * multiplier,
+                heightC: 571 * multiplier,
+                opacity: 100,
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: 0 * multiplier,
+            left: multiplier == 1.0 ? 380 * multiplier : 200 * multiplier,
             child: Container(
-              width: 382.46,
-              height: 600,
+              width: 383 * multiplier,
+              height: 600 * multiplier,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(
                       'assets/images/rectangle_1.png',
                     ),
-                    fit: BoxFit.fitHeight,
+                    fit: BoxFit.contain,
                     opacity: .15),
               ),
             ),
           ),
-          const Positioned(
-            left: 60,
-            top: 220,
+          Positioned(
+            left: 60 * multiplier,
+            top: 220 * multiplier,
             child: SizedBox(
-              width: 145,
-              height: 80,
-              child: CirculosEnGrid(),
+              width: 145 * multiplier,
+              height: 80 * multiplier,
+              child: const CirculosEnGrid(),
             ),
           ),
           Positioned(
-            left: 10,
-            top: 10,
+            right: 200 * multiplier,
+            top: 790 * multiplier,
             child: SizedBox(
-              width: 350,
-              height: 150,
+              width: 145 * multiplier,
+              height: 80 * multiplier,
+              child: const CirculosEnGrid(),
+            ),
+          ),
+          Positioned(
+            left: 10 * multiplier,
+            top: 20 * multiplier,
+            bottom: 200 * multiplier,
+            right: 10 * multiplier,
+            child: SizedBox(
+              width: 350 * multiplier,
+              height: 150 * multiplier,
               child: Stack(
                 children: [
                   Container(
-                    width: 150,
-                    height: 150,
+                    width: 150 * multiplier,
+                    height: 150 * multiplier,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
@@ -88,22 +104,22 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const Positioned(
-                    left: 135,
-                    top: 55,
+                  Positioned(
+                    left: 135 * multiplier,
+                    top: 55 * multiplier,
                     child: Column(
                       children: [
                         Text(
                           "MEET & GREET",
                           style: TextStyle(
-                            fontSize: 14.278368949890137,
+                            fontSize: 14.278368949890137 * multiplier,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
                         Text(
                           "EXPERIENCE 2024",
                           style: TextStyle(
-                            fontSize: 14.278368949890137,
+                            fontSize: 14.278368949890137 * multiplier,
                             fontWeight: FontWeight.w700,
                           ),
                         )
@@ -114,144 +130,156 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-          const Positioned(
-            top: 340,
-            left: -5,
+          Positioned(
+            top: multiplier == 1.0 ? 350 * multiplier : 250 * multiplier,
+            left: 60 * multiplier,
             child: SizedBox(
-              width: 700,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+              width: 690 * multiplier,
+              height: 325 * multiplier,
+              child: Stack(
+                children: <Widget>[
                   Positioned(
-                    top: 80,
+                    top: 0 * multiplier,
+                    left: 0 * multiplier,
                     child: SizedBox(
-                      width: 700,
-                      height: 18,
+                      width: 690 * multiplier,
+                      height: 25 * multiplier,
                       child: AnimationMainText(
                           img: "EXPO REFORMA,CDMX 26 - 27 OCTUBRE 2024",
-                          wiseAnimation: -400,
-                          fontSized: 12,
+                          wiseAnimation: 4,
+                          fontSized: 12 * multiplier,
                           fontWeight: FontWeight.w400,
-                          letterSpacing: 4.2),
+                          letterSpacing: 4.2 * multiplier),
                     ),
                   ),
                   Positioned(
-                    top: 120,
+                    top: 10 * multiplier,
+                    left: 0 * multiplier,
                     child: SizedBox(
-                      width: 700,
-                      height: 80,
+                      width: 650 * multiplier,
+                      height: 100 * multiplier,
                       child: AnimationMainText(
                           img: "MEET & GREET",
-                          wiseAnimation: 400,
-                          fontSized: 65,
+                          wiseAnimation: 400 * multiplier,
+                          fontSized: 55 * multiplier,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 0),
                     ),
                   ),
                   Positioned(
-                    top: 120,
+                    top: 90 * multiplier,
+                    left: 0 * multiplier,
                     child: SizedBox(
-                      width: 700,
-                      height: 80,
+                      width: 650 * multiplier,
+                      height: 100 * multiplier,
                       child: AnimationMainText(
                           img: "EXPERIENCE",
-                          wiseAnimation: -400,
-                          fontSized: 65,
+                          wiseAnimation: -300,
+                          fontSized: 55 * multiplier,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 0),
                     ),
                   ),
                   Positioned(
-                    top: 120,
-                    child: SizedBox(
-                      width: 700,
-                      height: 80,
+                    top: 170 * multiplier,
+                    left: 0 * multiplier,
+                    child: Container(
+                      alignment: Alignment.center,
+                      width: 650 * multiplier,
+                      height: 100 * multiplier,
                       child: AnimationMainText(
                           img: "2024",
                           wiseAnimation: 400,
-                          fontSized: 65,
+                          fontSized: 55 * multiplier,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 0),
+                    ),
+                  ),
+                  Positioned(
+                    left: 0 * multiplier,
+                    bottom: 0 * multiplier,
+                    child: SizedBox(
+                      width: 230 * multiplier,
+                      height: 60 * multiplier,
+                      child: ButtonMain(
+                        heightB: 15 * multiplier,
+                        widthB: 145 * multiplier,
+                        title: 'Regístrate',
+                      ),
                     ),
                   ),
                 ],
               ),
             ),
           ),
-          const Positioned(
-            left: 800,
+          Positioned(
+            top: 80 * multiplier,
+            right: 15 * multiplier,
+            bottom: 10 * multiplier,
             child: SizedBox(
-              width: 270,
-              height: 830,
-              child: AnimationMain(
-                img: 'assets/images/rectangle_15.png',
-                wiseAnimation: 600,
+              width: 650 * multiplier,
+              height: 1000 * multiplier,
+              child: Stack(
+                children: [
+                  Positioned(
+                    left: 1 * multiplier,
+                    top: 0 * multiplier,
+                    child: SizedBox(
+                      width: 150 * multiplier,
+                      height: 980 * multiplier,
+                      child: const AnimationMain(
+                        img: 'assets/images/rectangle_15.png',
+                        wiseAnimation: 600,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 160 * multiplier,
+                    bottom: 0 * multiplier,
+                    child: SizedBox(
+                      width: 150 * multiplier,
+                      height: 980 * multiplier,
+                      child: const AnimationMain(
+                        img: 'assets/images/rectangle_7.png',
+                        wiseAnimation: -600,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 320 * multiplier,
+                    top: 0 * multiplier,
+                    child: SizedBox(
+                      width: 150 * multiplier,
+                      height: 980 * multiplier,
+                      child: const AnimationMain(
+                        img: 'assets/images/rectangle_9.png',
+                        wiseAnimation: 600,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 480 * multiplier,
+                    bottom: 0 * multiplier,
+                    child: SizedBox(
+                      width: 150 * multiplier,
+                      height: 980 * multiplier,
+                      child: const AnimationMain(
+                        img: 'assets/images/rectangle_11.png',
+                        wiseAnimation: -600,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
-          const Positioned(
-            left: 1000,
-            top: 80,
+          Positioned(
+            right: 50 * multiplier,
+            top: 0 * multiplier,
             child: SizedBox(
-              width: 270,
-              height: 830,
-              child: AnimationMain(
-                img: 'assets/images/rectangle_7.png',
-                wiseAnimation: -600,
-              ),
-            ),
-          ),
-          const Positioned(
-            left: 1200,
-            child: SizedBox(
-              width: 270,
-              height: 830,
-              child: AnimationMain(
-                img: 'assets/images/rectangle_9.png',
-                wiseAnimation: 600,
-              ),
-            ),
-          ),
-          const Positioned(
-            left: 1400,
-            top: 80,
-            child: SizedBox(
-              width: 270,
-              height: 830,
-              child: AnimationMain(
-                img: 'assets/images/rectangle_11.png',
-                wiseAnimation: -600,
-              ),
-            ),
-          ),
-          const Positioned(
-            left: 1260,
-            top: 850,
-            child: SizedBox(
-              width: 145,
-              height: 80,
-              child: CirculosEnGrid(),
-            ),
-          ),
-          const Positioned(
-            left: 300,
-            top: 650,
-            child: SizedBox(
-              width: 200,
-              height: 60,
-              child: ButtonMain(
-                heightB: 15,
-                widthB: 145,
-                title: 'Regístrate ahora',
-              ),
-            ),
-          ),
-          const Positioned(
-            left: 1050,
-            child: SizedBox(
-              width: 700,
-              height: 60,
-              child: BarNaviv(),
+              width: 900 * multiplier,
+              height: 70 * multiplier,
+              child: const BarNaviv(),
             ),
           ),
         ],
