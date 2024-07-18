@@ -47,8 +47,10 @@ class BarNaviv extends StatelessWidget {
           child: Text(
             'HOME',
             style: TextStyle(
-              color: Colors.black,
-              fontSize: 20 * multiplier,
+              color: Colors.blueGrey,
+              fontSize: 17 * multiplier,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Roboto',
             ),
           ),
         ),
@@ -64,8 +66,10 @@ class BarNaviv extends StatelessWidget {
           child: Text(
             '¿QUE ES?',
             style: TextStyle(
-              color: Colors.black,
-              fontSize: 20 * multiplier,
+              color: Colors.blueGrey,
+              fontSize: 17 * multiplier,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Roboto',
             ),
           ),
         ),
@@ -81,8 +85,10 @@ class BarNaviv extends StatelessWidget {
           child: Text(
             'INVITADOS',
             style: TextStyle(
-              color: Colors.black,
-              fontSize: 20 * multiplier,
+              color: Colors.blueGrey,
+              fontSize: 17 * multiplier,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Roboto',
             ),
           ),
         ),
@@ -98,8 +104,10 @@ class BarNaviv extends StatelessWidget {
           child: Text(
             'HORARIOS',
             style: TextStyle(
-              color: Colors.black,
-              fontSize: 20 * multiplier,
+              color: Colors.blueGrey,
+              fontSize: 17 * multiplier,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Roboto',
             ),
           ),
         ),
@@ -115,8 +123,10 @@ class BarNaviv extends StatelessWidget {
           child: Text(
             'CONTACTO',
             style: TextStyle(
-              color: Colors.black,
-              fontSize: 20 * multiplier,
+              color: Colors.blueGrey,
+              fontSize: 17 * multiplier,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Roboto',
             ),
           ),
         ),

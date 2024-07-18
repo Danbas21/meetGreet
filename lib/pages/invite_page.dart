@@ -174,7 +174,7 @@ class ListInvites extends StatelessWidget {
                         width: 600,
                         height: 80,
                         child: Text(
-                          "Idolos del Box",
+                          "Ídolos del Box",
                           style: TextStyle(
                             fontSize: 65,
                             fontWeight: FontWeight.bold,
@@ -190,7 +190,7 @@ class ListInvites extends StatelessWidget {
                         width: 600,
                         height: 70,
                         child: Text(
-                          "Idolos del Futbol",
+                          "Ídolos del Futbol",
                           style: TextStyle(
                             fontSize: 60,
                             fontWeight: FontWeight.bold,
@@ -206,7 +206,7 @@ class ListInvites extends StatelessWidget {
                         width: 600,
                         height: 80,
                         child: Text(
-                          "Idolos del Ring",
+                          "Ídolos del Ring",
                           style: TextStyle(
                             fontSize: 60,
                             fontWeight: FontWeight.bold,

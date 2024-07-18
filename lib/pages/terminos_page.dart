@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/utils/bar_navegacion.dart';
+import 'package:flutter_app/utils/screen_utils.dart';
 import 'package:flutter_app/utils/widget_circulo.dart';
 import 'package:flutter_app/utils/widget_grid_cir.dart';
 
@@ -8,18 +9,11 @@ class Terminos extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double multiplier = ResponsiveUtil.getMultiplier(context);
     return Scaffold(
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
         child: Stack(children: [
-          const Positioned(
-            right: 100,
-            child: SizedBox(
-              width: 700,
-              height: 100,
-              child: BarNaviv(),
-            ),
-          ),
           const Positioned(
             left: -200,
             bottom: 1000,
@@ -190,6 +184,15 @@ class Terminos extends StatelessWidget {
                   ),
                 );
               },
+            ),
+          ),
+          Positioned(
+            right: 50 * multiplier,
+            top: 0 * multiplier,
+            child: SizedBox(
+              width: 900 * multiplier,
+              height: 70 * multiplier,
+              child: const BarNaviv(),
             ),
           ),
         ]),

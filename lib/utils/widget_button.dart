@@ -24,14 +24,21 @@ class ButtonMain extends StatelessWidget {
         icon: Icon(
           Icons.arrow_downward,
           color: Colors.white,
-          size: 30 * multiplier,
+          size: 14 * multiplier,
         ),
-        label: Text(title, style: const TextStyle(color: Colors.white)),
+        label: Text(
+          title,
+          textAlign: TextAlign.left,
+          style: const TextStyle(
+            color: Colors.white,
+          ),
+        ),
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.blue,
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+          padding: EdgeInsets.symmetric(
+              horizontal: 14 * multiplier, vertical: 10 * multiplier),
           textStyle: TextStyle(
-            fontSize: 16 * multiplier,
+            fontSize: 14 * multiplier,
           ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),

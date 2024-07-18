@@ -35,13 +35,13 @@ class WhatIsPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: 50 * multiplier,
-              bottom: -450 * multiplier,
+              right: 0 * multiplier,
+              bottom: -420 * multiplier,
               child: SizedBox(
-                width: 950 * multiplier,
-                height: 950 * multiplier,
+                width: 700 * multiplier,
+                height: 900 * multiplier,
                 child: Circumference2(
-                  widthC: 900 * multiplier,
+                  widthC: 700 * multiplier,
                   heightC: 900 * multiplier,
                   opacity: 100,
                 ),
@@ -71,10 +71,10 @@ class WhatIsPage extends StatelessWidget {
             ),
             Positioned(
               left: 150 * multiplier,
-              bottom: multiplier == 1.0 ? 180 * multiplier : 700 * multiplier,
+              top: multiplier == 1.0 ? 180 * multiplier : 170 * multiplier,
               child: Container(
-                width: 600 * multiplier,
-                height: 600 * multiplier,
+                width: 500 * multiplier,
+                height: 500 * multiplier,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
@@ -86,7 +86,7 @@ class WhatIsPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 160 * multiplier,
+              left: 50 * multiplier,
               top: 90 * multiplier,
               child: SizedBox(
                 width: 400 * multiplier,
@@ -112,19 +112,18 @@ class WhatIsPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: 60,
-              top: 60,
+              left: 0 * multiplier,
+              bottom: 0 * multiplier,
               child: SizedBox(
-                width: width * multiplier,
+                width: 500 * multiplier,
                 height: 310 * multiplier,
                 child: Stack(
                   children: [
                     Positioned(
-                      top: 5 * multiplier,
+                      top: 0 * multiplier,
                       right: 0 * multiplier,
-                      left: 0 * multiplier,
                       child: SizedBox(
-                        width: width / 3,
+                        width: 500,
                         height: 400 * multiplier,
                         child: ListView.builder(
                           itemCount: ListImages.listImage.length,
@@ -134,8 +133,8 @@ class WhatIsPage extends StatelessWidget {
                               padding: const EdgeInsets.all(2.0) * multiplier,
                               child: Image.asset(
                                 ListImages.listImage[index],
-                                width: 400 * multiplier,
-                                height: 400 * multiplier,
+                                width: 200 * multiplier,
+                                height: 200 * multiplier,
                                 fit: BoxFit.contain,
                               ),
                             );
@@ -148,8 +147,8 @@ class WhatIsPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: 100 * multiplier,
-              bottom: 200 * multiplier,
+              right: 0 * multiplier,
+              top: 700 * multiplier,
               child: SizedBox(
                 width: 800 * multiplier,
                 height: 400 * multiplier,
@@ -163,8 +162,8 @@ class WhatIsPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              bottom: 300 * multiplier,
-              right: 250 * multiplier,
+              top: 950 * multiplier,
+              right: 180 * multiplier,
               child: Text(
                 '@MANCAVE_AUTOGRAPHS',
                 style: TextStyle(
@@ -175,7 +174,7 @@ class WhatIsPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 550 * multiplier,
+              left: 50 * multiplier,
               bottom: 0 * multiplier,
               child: Container(
                 width: 382 * multiplier,
@@ -191,7 +190,7 @@ class WhatIsPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: 50 * multiplier,
+              right: 250 * multiplier,
               top: 0 * multiplier,
               child: SizedBox(
                 width: 900 * multiplier,

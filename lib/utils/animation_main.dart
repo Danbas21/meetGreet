@@ -94,7 +94,7 @@ class HomePageState extends State<AnimationMain>
                     opacity: _opacityAnimation,
                     child: Image.asset(
                       widget.img,
-                      fit: BoxFit.fill,
+                      fit: BoxFit.contain,
                     ),
                   ),
                 ));

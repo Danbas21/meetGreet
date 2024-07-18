@@ -9,7 +9,7 @@ class CirculosEnGrid extends StatelessWidget {
     double multiplier = ResponsiveUtil.getMultiplier(context);
 
     final double dpi = MediaQuery.of(context).devicePixelRatio;
-    double cmToPx = 35.7952755906 * multiplier;
+    double cmToPx = 35.7952755906;
     final double containerSize = 20 * cmToPx / dpi;
 
     return SizedBox(

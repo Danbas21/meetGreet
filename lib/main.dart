@@ -17,16 +17,15 @@ class MyApp extends StatelessWidget {
       ),
       title: 'Flutter App',
       home: const Scaffold(
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              HomePage(),
-              LandingPage2(),
-              LadingPage3(),
-            ],
-          ),
+          body: SingleChildScrollView(
+        child: Column(
+          children: [
+            HomePage(),
+            LandingPage2(),
+            LadingPage3(),
+          ],
         ),
-      ),
+      )),
     );
   }
 }
