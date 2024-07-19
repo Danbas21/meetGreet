@@ -15,6 +15,25 @@ class WhatIsPage extends StatelessWidget {
     String paragraph =
         '''Meet & Greet Experience será el primer evento de firma de autógrafos en todo México, donde contaremos con la asistencia de los mejores deportistas en la historia de México. Podrás convivir con ellos, tomarte una foto, firmar tu artículo y autenticarlo con la empresa líder en Estados Unidos, BECKETT.''';
     double multiplier = ResponsiveUtil.getMultiplier(context);
+
+    double widthContainer = multiplier == 1.0
+        ? 750
+        : multiplier == .70
+            ? 700
+            : width;
+    double heightContainer = multiplier == 1.0 ? 1200 : height;
+
+    double divisor = multiplier == 1.0 ? 1 : 1.4;
+    double spaceElement = multiplier == 1.0 ? 3 : 2.7;
+
+    double widthMultiplier = multiplier == 1.0 ? 1.3 : 1.45;
+    double heightMultiplier = multiplier == 1.0 ? 1.3 : 1.12;
+    double fontSize = multiplier == 1.0
+        ? 1
+        : multiplier == 0.7
+            ? 1.8
+            : 3.86;
+
     return Scaffold(
       body: SizedBox(
         width: width,
@@ -70,11 +89,19 @@ class WhatIsPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 150 * multiplier,
-              top: multiplier == 1.0 ? 180 * multiplier : 170 * multiplier,
+              left: multiplier == 1.0
+                  ? 160
+                  : multiplier == .70
+                      ? 220
+                      : 40,
+              top: multiplier == 1.0
+                  ? 18
+                  : multiplier == .70
+                      ? -170
+                      : -35,
               child: Container(
-                width: 500 * multiplier,
-                height: 500 * multiplier,
+                width: widthContainer / divisor,
+                height: heightContainer / divisor,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
@@ -112,19 +139,27 @@ class WhatIsPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 0 * multiplier,
-              bottom: 0 * multiplier,
+              left: multiplier == 1.0
+                  ? 1100
+                  : multiplier == 0.7
+                      ? 150
+                      : 10,
+              bottom: multiplier == 1.0
+                  ? 140
+                  : multiplier == 0.7
+                      ? -390
+                      : -220,
               child: SizedBox(
-                width: 500 * multiplier,
-                height: 310 * multiplier,
+                width: widthContainer,
+                height: heightContainer,
                 child: Stack(
                   children: [
                     Positioned(
                       top: 0 * multiplier,
                       right: 0 * multiplier,
                       child: SizedBox(
-                        width: 500,
-                        height: 400 * multiplier,
+                        width: widthContainer,
+                        height: heightContainer,
                         child: ListView.builder(
                           itemCount: ListImages.listImage.length,
                           scrollDirection: Axis.horizontal,
@@ -133,9 +168,9 @@ class WhatIsPage extends StatelessWidget {
                               padding: const EdgeInsets.all(2.0) * multiplier,
                               child: Image.asset(
                                 ListImages.listImage[index],
-                                width: 200 * multiplier,
-                                height: 200 * multiplier,
                                 fit: BoxFit.contain,
+                                width: widthContainer,
+                                height: heightContainer,
                               ),
                             );
                           },
@@ -147,8 +182,12 @@ class WhatIsPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: 0 * multiplier,
-              top: 700 * multiplier,
+              right: multiplier == .7 ? 300 : 2,
+              top: multiplier == 1
+                  ? 700
+                  : multiplier == .7
+                      ? 600
+                      : 323,
               child: SizedBox(
                 width: 800 * multiplier,
                 height: 400 * multiplier,
@@ -162,8 +201,12 @@ class WhatIsPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 950 * multiplier,
-              right: 180 * multiplier,
+              right: multiplier == .7 ? 350 : 40,
+              bottom: multiplier == 1.0
+                  ? 400
+                  : multiplier == .7
+                      ? 550
+                      : 220,
               child: Text(
                 '@MANCAVE_AUTOGRAPHS',
                 style: TextStyle(
@@ -190,11 +233,11 @@ class WhatIsPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: 250 * multiplier,
+              right: 0 * multiplier,
               top: 0 * multiplier,
               child: SizedBox(
-                width: 900 * multiplier,
-                height: 70 * multiplier,
+                width: 850 * multiplier,
+                height: 90 * multiplier,
                 child: const BarNaviv(),
               ),
             ),

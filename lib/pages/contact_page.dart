@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/utils/bar_navegacion.dart';
 import 'package:flutter_app/utils/box_text.dart';
 import 'package:flutter_app/utils/checkbox.dart';
+import 'package:flutter_app/utils/screen_utils.dart';
 import 'package:flutter_app/utils/widget_button.dart';
 import 'package:flutter_app/utils/widget_circulo.dart';
 import 'package:flutter_app/utils/widget_grid_cir.dart';
@@ -11,20 +12,34 @@ class ContactPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+    double multiplier = ResponsiveUtil.getMultiplier(context);
+
+    double widthContainer = multiplier == 1.0
+        ? 750
+        : multiplier == .70
+            ? 700
+            : width;
+    double heightContainer = multiplier == 1.0 ? 1200 : height;
+
+    double divisor = multiplier == 1.0 ? 3.5 : 3.0;
+    double spaceElement = multiplier == 1.0 ? 3 : 2.7;
+
+    double widthMultiplier = multiplier == 1.0 ? 1.3 : 1.45;
+    double heightMultiplier = multiplier == 1.0 ? 1.3 : 1.12;
+    double fontSize = multiplier == 1.0
+        ? 1
+        : multiplier == 0.7
+            ? 1.8
+            : 3.86;
+
     return Scaffold(
       body: SizedBox(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
+        width: width,
+        height: height,
         child: Stack(
           children: [
-            const Positioned(
-              left: 1050,
-              child: SizedBox(
-                width: 700,
-                height: 60,
-                child: BarNaviv(),
-              ),
-            ),
             const Positioned(
               left: -214.3,
               top: -288,
@@ -206,6 +221,15 @@ class ContactPage extends StatelessWidget {
                 width: 120,
                 height: 65,
                 child: CirculosEnGrid(),
+              ),
+            ),
+            Positioned(
+              right: 0 * multiplier,
+              top: 0 * multiplier,
+              child: SizedBox(
+                width: 850 * multiplier,
+                height: 90 * multiplier * multiplier,
+                child: const BarNaviv(),
               ),
             ),
           ],

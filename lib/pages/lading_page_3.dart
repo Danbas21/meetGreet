@@ -13,6 +13,35 @@ class LadingPage3 extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     double multiplier = ResponsiveUtil.getMultiplier(context);
+
+    double widthContainer = multiplier == 1.0
+        ? 1850
+        : multiplier == .70
+            ? 970
+            : width;
+    double heightContainer = multiplier == 1.0
+        ? 1700
+        : multiplier == .70
+            ? 1000
+            : width;
+
+    double heightMultiplier = multiplier == 1.0 ? 1.3 : 1.12;
+
+    double divisor = multiplier == 1.0
+        ? 2.8
+        : multiplier == .7
+            ? 2.2
+            : 1.4;
+    double spaceElement = multiplier == 1.0 ? 3 : 2.7;
+
+    double widthMultiplier = multiplier == 1.0 ? 1.3 : 1.45;
+
+    double fontSize = multiplier == 1.0
+        ? 1
+        : multiplier == 0.7
+            ? 1.8
+            : 3.86;
+
     return SizedBox(
       width: width,
       height: height * multiplier,
@@ -72,11 +101,11 @@ class LadingPage3 extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      left: 10 * multiplier,
-                      top: 70 * multiplier,
+                      left: 30 * multiplier,
+                      top: 200 * multiplier,
                       child: SizedBox(
-                        width: 850 * multiplier,
-                        height: 338 * multiplier,
+                        width: widthContainer,
+                        height: heightContainer / divisor,
                         child: ListView.builder(
                             itemCount: 3,
                             scrollDirection: Axis.horizontal,
@@ -108,23 +137,46 @@ class Photos4 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     double multiplier = ResponsiveUtil.getMultiplier(context);
+    double widthContainer = multiplier == 1.0
+        ? 1900
+        : multiplier == .70
+            ? 970
+            : width;
+    double heightContainer = multiplier == 1.0
+        ? 700
+        : multiplier == .70
+            ? 350
+            : 200;
+
+    double heightMultiplier = multiplier == 1.0 ? 1.3 : 2;
+    double divisor = multiplier == 1.0 ? 3.5 : 1.4;
+    double fontSize = multiplier == 1.0
+        ? 1
+        : multiplier == 0.7
+            ? 1.8
+            : 3;
 
     return SizedBox(
-      width: 550 * multiplier,
-      height: 350 * multiplier,
+      width: widthContainer / divisor,
+      height: heightContainer * heightMultiplier,
       child: Stack(children: [
         Positioned(
-          left: 150 * multiplier,
-          bottom: 0 * multiplier,
+          left: multiplier == 1.0
+              ? 40
+              : multiplier == 0.7
+                  ? 200
+                  : 70,
+          bottom: 0,
           child: SizedBox(
-            width: 700 * multiplier,
-            height: 30 * multiplier,
+            width: widthContainer,
+            height: 100,
             child: Text(
               'MEET AND GREET',
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 25 * multiplier,
+                fontSize: (50 / fontSize),
                 fontFamily: 'Roboto',
                 fontWeight: FontWeight.w700,
               ),
@@ -132,11 +184,11 @@ class Photos4 extends StatelessWidget {
           ),
         ),
         Positioned(
-            left: 0 * multiplier,
-            top: 0 * multiplier,
+            left: 0,
+            top: 0,
             child: SizedBox(
-              width: 500 * multiplier,
-              height: 300 * multiplier,
+              width: widthContainer / divisor,
+              height: heightContainer,
               child: Image.asset('assets/images/rectangle_20.jpeg'),
             ))
       ]),
@@ -149,22 +201,46 @@ class Photos1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     double multiplier = ResponsiveUtil.getMultiplier(context);
+    double widthContainer = multiplier == 1.0
+        ? 1900
+        : multiplier == .70
+            ? 970
+            : width;
+    double heightContainer = multiplier == 1.0
+        ? 700
+        : multiplier == .70
+            ? 350
+            : 200;
+
+    double heightMultiplier = multiplier == 1.0 ? 1.3 : 2;
+    double divisor = multiplier == 1.0 ? 3.5 : 1.4;
+    double fontSize = multiplier == 1.0
+        ? 1
+        : multiplier == 0.7
+            ? 1.8
+            : 3;
 
     return SizedBox(
-      width: 600 * multiplier,
+      width: widthContainer / divisor,
+      height: heightContainer * heightMultiplier,
       child: Stack(children: [
         Positioned(
-          left: 180 * multiplier,
-          bottom: 0 * multiplier,
+          left: multiplier == 1.0
+              ? 40
+              : multiplier == 0.7
+                  ? 200
+                  : 70,
+          bottom: 0,
           child: SizedBox(
-            width: 700 * multiplier,
-            height: 40 * multiplier,
+            width: widthContainer,
+            height: 100,
             child: Text(
               'PRÓXIMOS EVENTOS',
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 25 * multiplier,
+                fontSize: (50 / fontSize),
                 fontFamily: 'Roboto',
                 fontWeight: FontWeight.w700,
               ),
@@ -175,8 +251,8 @@ class Photos1 extends StatelessWidget {
             left: 0 * multiplier,
             top: 0 * multiplier,
             child: SizedBox(
-              width: 550 * multiplier,
-              height: 350 * multiplier,
+              width: widthContainer / divisor,
+              height: heightContainer,
               child: Image.asset('assets/images/rectangle_6.png'),
             ))
       ]),
@@ -191,47 +267,71 @@ class Photos2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     double multiplier = ResponsiveUtil.getMultiplier(context);
+    double widthContainer = multiplier == 1.0
+        ? 1900
+        : multiplier == .70
+            ? 970
+            : width;
+    double heightContainer = multiplier == 1.0
+        ? 700
+        : multiplier == .70
+            ? 350
+            : 200;
+
+    double heightMultiplier = multiplier == 1.0 ? 1.3 : 1.9;
+    double divisor = multiplier == 1.0 ? 2 : 1.3;
+    double fontSize = multiplier == 1.0
+        ? 1
+        : multiplier == 0.7
+            ? 1.8
+            : 3;
+
     return SizedBox(
-      width: 450 * multiplier,
+      width: widthContainer / divisor,
+      height: heightContainer * heightMultiplier,
       child: Stack(
         children: [
           Positioned(
-            left: 60 * multiplier,
-            top: 0 * multiplier,
+            left: 60,
+            top: -10,
             child: SizedBox(
-              width: 250 * multiplier,
-              height: 250 * multiplier,
+              width: widthContainer / divisor,
+              height: heightContainer,
               child: Image.asset('assets/images/rectangle_3.png'),
             ),
           ),
           Positioned(
-            right: 40 * multiplier,
-            top: 15 * multiplier,
+            right: 40,
+            top: 15,
             child: SizedBox(
-              width: 270 * multiplier,
-              height: 270 * multiplier,
+              width: widthContainer / divisor,
+              height: heightContainer,
               child: Image.asset('assets/images/rectangle_4.png'),
             ),
           ),
           Positioned(
-            left: 80 * multiplier,
-            top: 10 * multiplier,
+            left: 80,
+            top: multiplier == .45 ? -19 : 10,
             child: SizedBox(
-              width: 290 * multiplier,
-              height: 290 * multiplier,
+              width: widthContainer / divisor,
+              height: heightContainer * 1.3,
               child: Image.asset(
                 'assets/images/e9b4486e5cb972cdb482690080dfcd70.png',
-                height: 290 * multiplier,
-                width: 290 * multiplier,
               ),
             ),
           ),
           Positioned(
-            left: 40 * multiplier,
-            bottom: 5 * multiplier,
+            left: multiplier == 1.0
+                ? 40
+                : multiplier == 0.7
+                    ? 200
+                    : 50,
+            bottom: 5,
             child: SizedBox(
-              width: 350 * multiplier,
+              width: widthContainer,
+              height: 100,
               child: Text(
                 'ARTÍCULOS COLECCIONABLES',
                 textAlign: TextAlign.start,
@@ -240,7 +340,7 @@ class Photos2 extends StatelessWidget {
                   background: Paint()
                     ..color = const Color.fromARGB(99, 234, 241, 242),
                   color: Colors.black,
-                  fontSize: 25 * multiplier,
+                  fontSize: (50 / fontSize),
                   fontFamily: 'Roboto',
                   fontWeight: FontWeight.w700,
                 ),

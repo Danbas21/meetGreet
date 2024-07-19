@@ -9,17 +9,17 @@ class ImageGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       child: GridView.builder(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(8),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount:
               images.length <= 5 ? images.length : images.length ~/ 2,
-          crossAxisSpacing: 28,
-          mainAxisSpacing: 28,
+          crossAxisSpacing: 22,
+          mainAxisSpacing: 22,
         ),
         itemCount: images.length,
         itemBuilder: (context, index) {
           return HoverContainer(
-            child: Image.network(
+            child: Image.asset(
               images[index % images.length],
               fit: BoxFit.fill,
             ),
@@ -43,13 +43,13 @@ class ImageGrid1 extends StatelessWidget {
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount:
               images.length <= 5 ? images.length : images.length ~/ 2,
-          crossAxisSpacing: 28,
-          mainAxisSpacing: 28,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 22,
         ),
         itemCount: images.length,
         itemBuilder: (context, index) {
           return HoverContainer(
-            child: Image.network(
+            child: Image.asset(
               images[index % images.length],
               fit: BoxFit.contain,
             ),

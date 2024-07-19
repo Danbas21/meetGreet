@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/utils/bar_navegacion.dart';
 import 'package:flutter_app/utils/invite_grid.dart';
 import 'package:flutter_app/utils/list_images.dart';
+import 'package:flutter_app/utils/screen_utils.dart';
 import 'package:flutter_app/utils/widget_circulo.dart';
 import 'package:flutter_app/utils/widget_grid_cir.dart';
 
@@ -10,232 +11,272 @@ class ListInvites extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double multiplier = ResponsiveUtil.getMultiplier(context);
+
+    double width = MediaQuery.of(context).size.width;
+
+    double widthContainer = multiplier == 1.0
+        ? 1600
+        : multiplier == .70
+            ? 700
+            : 900;
+    double heightContainer = multiplier == 1.0
+        ? 800
+        : multiplier == .70
+            ? 400
+            : 250;
+
+    double divisor = multiplier == 1.0
+        ? 6
+        : multiplier == .7
+            ? 8
+            : 12;
+
+    double fontSize = multiplier == 1.0
+        ? 1
+        : multiplier == 0.7
+            ? 1.8
+            : 3.86;
+
     return Scaffold(
       body: SingleChildScrollView(
         child: SizedBox(
-          width: MediaQuery.of(context).size.width,
+          width: width,
           child: Stack(
             children: [
-              const Positioned(
-                left: -200,
-                bottom: 1000,
+              Positioned(
+                left: -200 * multiplier,
+                bottom: 1000 * multiplier,
                 child: SizedBox(
-                  width: 800,
-                  height: 800,
+                  width: 800 * multiplier,
+                  height: 800 * multiplier,
                   child: Circumference(
-                    widthC: 700,
-                    heightC: 645.04,
+                    widthC: 700 * multiplier,
+                    heightC: 646 * multiplier,
                     opacity: 100,
                   ),
                 ),
               ),
-              const Positioned(
-                right: 90,
-                bottom: 1000,
+              Positioned(
+                right: 90 * multiplier,
+                bottom: 1000 * multiplier,
                 child: SizedBox(
-                  width: 145,
-                  height: 80,
+                  width: 145 * multiplier,
+                  height: 80 * multiplier,
                   child: CirculosEnGrid(),
                 ),
               ),
-              const Positioned(
-                left: -200,
-                bottom: 1100,
+              Positioned(
+                left: -200 * multiplier,
+                bottom: 1100 * multiplier,
                 child: SizedBox(
-                  width: 600,
-                  height: 600,
+                  width: 600 * multiplier,
+                  height: 600 * multiplier,
                   child: Circumference3(
-                    widthC: 700,
-                    heightC: 645.04,
+                    widthC: 700 * multiplier,
+                    heightC: 645.04 * multiplier,
                     opacity: 225,
                   ),
                 ),
               ),
-              const Positioned(
-                right: -250,
-                top: 1000,
+              Positioned(
+                right: -250 * multiplier,
+                top: 1000 * multiplier,
                 child: SizedBox(
-                  width: 800,
-                  height: 800,
+                  width: 800 * multiplier,
+                  height: 800 * multiplier,
                   child: Circumference(
-                    widthC: 700,
-                    heightC: 645.04,
+                    widthC: 700 * multiplier,
+                    heightC: 646 * multiplier,
                     opacity: 100,
                   ),
                 ),
               ),
-              const Positioned(
-                left: 90,
-                top: 950,
+              Positioned(
+                left: 90 * multiplier,
+                top: 950 * multiplier,
                 child: SizedBox(
-                  width: 145,
-                  height: 80,
-                  child: CirculosEnGrid(),
+                  width: 145 * multiplier,
+                  height: 80 * multiplier,
+                  child: const CirculosEnGrid(),
                 ),
               ),
-              const Positioned(
-                right: -300,
-                top: 1100,
+              Positioned(
+                right: -300 * multiplier,
+                top: 1100 * multiplier,
                 child: SizedBox(
-                  width: 600,
-                  height: 600,
+                  width: 600 * multiplier,
+                  height: 600 * multiplier,
                   child: Circumference3(
-                    widthC: 700,
-                    heightC: 645.04,
+                    widthC: 700 * multiplier,
+                    heightC: 646 * multiplier,
                     opacity: 225,
                   ),
                 ),
               ),
-              const Positioned(
-                left: 1050,
+              Positioned(
+                left: -200 * multiplier,
+                top: -250 * multiplier,
                 child: SizedBox(
-                  width: 700,
-                  height: 60,
-                  child: BarNaviv(),
-                ),
-              ),
-              const Positioned(
-                left: -200,
-                top: -250,
-                child: SizedBox(
-                  width: 800,
-                  height: 800,
+                  width: 800 * multiplier,
+                  height: 800 * multiplier,
                   child: Circumference(
-                    widthC: 700,
-                    heightC: 645.04,
+                    widthC: 700 * multiplier,
+                    heightC: 646 * multiplier,
                     opacity: 100,
                   ),
                 ),
               ),
-              const Positioned(
-                right: 90,
-                top: 290,
+              Positioned(
+                right: 90 * multiplier,
+                top: 290 * multiplier,
                 child: SizedBox(
-                  width: 145,
-                  height: 80,
-                  child: CirculosEnGrid(),
+                  width: 145 * multiplier,
+                  height: 80 * multiplier,
+                  child: const CirculosEnGrid(),
                 ),
               ),
-              const Positioned(
-                left: -200,
-                top: -270,
+              Positioned(
+                left: -200 * multiplier,
+                top: -270 * multiplier,
                 child: SizedBox(
-                  width: 600,
-                  height: 600,
+                  width: 600 * multiplier,
+                  height: 600 * multiplier,
                   child: Circumference3(
-                    widthC: 700,
-                    heightC: 645.04,
+                    widthC: 700 * multiplier,
+                    heightC: 646 * multiplier,
                     opacity: 225,
                   ),
                 ),
               ),
-              const Positioned(
-                right: -200,
-                bottom: -250,
+              Positioned(
+                right: -200 * multiplier,
+                bottom: -250 * multiplier,
                 child: SizedBox(
-                  width: 800,
-                  height: 800,
+                  width: 800 * multiplier,
+                  height: 800 * multiplier,
                   child: Circumference(
-                    widthC: 700,
-                    heightC: 645.04,
+                    widthC: 700 * multiplier,
+                    heightC: 645.04 * multiplier,
                     opacity: 100,
                   ),
                 ),
               ),
-              const Positioned(
-                left: 90,
-                bottom: 290,
+              Positioned(
+                left: 90 * multiplier,
+                bottom: 290 * multiplier,
                 child: SizedBox(
-                  width: 145,
-                  height: 80,
-                  child: CirculosEnGrid(),
+                  width: 200 * multiplier,
+                  height: 200 * multiplier,
+                  child: const CirculosEnGrid(),
                 ),
               ),
-              const Positioned(
-                right: -200,
-                bottom: -270,
+              Positioned(
+                right: -200 * multiplier,
+                bottom: -270 * multiplier,
                 child: SizedBox(
-                  width: 600,
-                  height: 600,
+                  width: 600 * multiplier,
+                  height: 600 * multiplier,
                   child: Circumference3(
-                    widthC: 700,
-                    heightC: 645.04,
+                    widthC: 700 * multiplier,
+                    heightC: 645 * multiplier,
                     opacity: 225,
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(100.0),
+                padding: const EdgeInsets.only(top: 60),
                 child: Center(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(
-                        width: 600,
-                        height: 80,
-                        child: Text(
-                          "Ídolos del Box",
-                          style: TextStyle(
-                            fontSize: 65,
-                            fontWeight: FontWeight.bold,
+                      Padding(
+                        padding: const EdgeInsets.all(7.0),
+                        child: SizedBox(
+                          width: widthContainer,
+                          height: heightContainer / divisor,
+                          child: Text(
+                            "Ídolos del Box",
+                            style: TextStyle(
+                              fontSize: (65 / fontSize),
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
                       SizedBox(
-                        width: 2000,
-                        height: 1050,
+                        width: widthContainer,
+                        height: heightContainer,
                         child: ImageGrid(images: ListImages.listBox),
                       ),
-                      const SizedBox(
-                        width: 600,
-                        height: 70,
-                        child: Text(
-                          "Ídolos del Futbol",
-                          style: TextStyle(
-                            fontSize: 60,
-                            fontWeight: FontWeight.bold,
+                      Padding(
+                        padding: const EdgeInsets.all(7.0),
+                        child: SizedBox(
+                          width: widthContainer,
+                          height: heightContainer / divisor,
+                          child: Text(
+                            "Ídolos del Futbol",
+                            style: TextStyle(
+                              fontSize: (65 / fontSize),
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
                       SizedBox(
-                        width: 2000,
-                        height: 900,
+                        width: widthContainer,
+                        height: heightContainer,
                         child: ImageGrid(images: ListImages.listFut),
                       ),
-                      const SizedBox(
-                        width: 600,
-                        height: 80,
-                        child: Text(
-                          "Ídolos del Ring",
-                          style: TextStyle(
-                            fontSize: 60,
-                            fontWeight: FontWeight.bold,
+                      Padding(
+                        padding: const EdgeInsets.all(7.0),
+                        child: SizedBox(
+                          width: widthContainer,
+                          height: heightContainer / divisor,
+                          child: Text(
+                            "Ídolos del Ring",
+                            style: TextStyle(
+                              fontSize: (65 / fontSize),
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
                       SizedBox(
-                        width: 2000,
-                        height: 500,
+                        width: widthContainer,
+                        height: heightContainer / 2,
                         child: ImageGrid(images: ListImages.listLuch),
                       ),
-                      const SizedBox(
-                        width: 600,
-                        height: 80,
-                        child: Text(
-                          "Estrellas del Deporte",
-                          style: TextStyle(
-                            fontSize: 60,
-                            fontWeight: FontWeight.bold,
+                      Padding(
+                        padding: const EdgeInsets.all(7.0),
+                        child: SizedBox(
+                          width: widthContainer,
+                          height: heightContainer / divisor,
+                          child: Text(
+                            "Estrellas del Deporte",
+                            style: TextStyle(
+                              fontSize: (65 / fontSize),
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
                       SizedBox(
-                        width: 2000,
-                        height: 1050,
+                        width: widthContainer,
+                        height: heightContainer,
                         child: ImageGrid(images: ListImages.listEstre),
                       ),
                     ],
                   ),
+                ),
+              ),
+              Positioned(
+                right: 0 * multiplier,
+                top: 0 * multiplier,
+                child: SizedBox(
+                  width: 850 * multiplier,
+                  height: 90 * multiplier,
+                  child: const BarNaviv(),
                 ),
               ),
             ],

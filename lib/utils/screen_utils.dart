@@ -7,11 +7,11 @@ class ResponsiveUtil {
 
   static bool isTablet(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    return width > 430 && width <= 1200;
+    return width > 430 && width <= 1024;
   }
 
   static bool isDesktop(BuildContext context) {
-    return MediaQuery.of(context).size.width > 1200;
+    return MediaQuery.of(context).size.width > 1024;
   }
 
   static double getMultiplier(BuildContext context) {

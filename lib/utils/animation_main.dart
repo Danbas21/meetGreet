@@ -26,7 +26,7 @@ class HomePageState extends State<AnimationMain>
     super.initState();
 
     _controller = AnimationController(
-      duration: const Duration(milliseconds: 600),
+      duration: const Duration(milliseconds: 900),
       vsync: this,
       animationBehavior: AnimationBehavior.preserve,
     );
