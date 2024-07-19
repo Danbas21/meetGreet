@@ -13,23 +13,6 @@ class Terminos extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
     double multiplier = ResponsiveUtil.getMultiplier(context);
 
-    double widthContainer = multiplier == 1.0
-        ? 750
-        : multiplier == .70
-            ? 700
-            : width;
-    double heightContainer = multiplier == 1.0 ? 1200 : height;
-
-    double divisor = multiplier == 1.0 ? 3.5 : 3.0;
-    double spaceElement = multiplier == 1.0 ? 3 : 2.7;
-
-    double widthMultiplier = multiplier == 1.0 ? 1.3 : 1.45;
-    double heightMultiplier = multiplier == 1.0 ? 1.3 : 1.12;
-    double fontSize = multiplier == 1.0
-        ? 1
-        : multiplier == 0.7
-            ? 1.8
-            : 3.86;
     return Scaffold(
       body: SizedBox(
         width: width,

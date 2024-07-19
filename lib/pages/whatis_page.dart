@@ -139,6 +139,22 @@ class WhatIsPage extends StatelessWidget {
               ),
             ),
             Positioned(
+              left: 50 * multiplier,
+              bottom: 0 * multiplier,
+              child: Container(
+                width: 382 * multiplier,
+                height: 600 * multiplier,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(
+                        'assets/images/rectangle_1.png',
+                      ),
+                      fit: BoxFit.fitHeight,
+                      opacity: .15),
+                ),
+              ),
+            ),
+            Positioned(
               left: multiplier == 1.0
                   ? 1100
                   : multiplier == 0.7
@@ -213,22 +229,6 @@ class WhatIsPage extends StatelessWidget {
                   color: Colors.black,
                   fontSize: 12 * multiplier,
                   fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Positioned(
-              left: 50 * multiplier,
-              bottom: 0 * multiplier,
-              child: Container(
-                width: 382 * multiplier,
-                height: 600 * multiplier,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(
-                        'assets/images/rectangle_1.png',
-                      ),
-                      fit: BoxFit.fitHeight,
-                      opacity: .15),
                 ),
               ),
             ),

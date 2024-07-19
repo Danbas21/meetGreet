@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/pasarela_pagos.dart';
 import 'package:flutter_app/utils/screen_utils.dart';
 
 class ButtonMain extends StatelessWidget {
@@ -20,7 +21,12 @@ class ButtonMain extends StatelessWidget {
       width: widthB,
       height: heightB,
       child: ElevatedButton.icon(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => PaymentGatewayScreen()),
+          );
+        },
         icon: Icon(
           Icons.arrow_downward,
           color: Colors.white,

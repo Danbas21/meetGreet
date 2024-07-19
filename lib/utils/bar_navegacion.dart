@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/contact_page.dart';
+import 'package:flutter_app/pages/sell_page.dart';
 import 'package:flutter_app/pages/invite_page.dart';
 import 'package:flutter_app/pages/lading_page.dart';
 import 'package:flutter_app/pages/lading_page_2.dart';
@@ -116,12 +116,12 @@ class BarNaviv extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ContactPage(),
+                builder: (context) => const SellTicket(),
               ),
             );
           },
           child: Text(
-            'CONTACTO',
+            'BOLETOS',
             style: TextStyle(
               color: Colors.blueGrey,
               fontSize: 17 * multiplier,
