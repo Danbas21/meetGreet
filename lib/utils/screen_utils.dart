@@ -2,23 +2,23 @@ import 'package:flutter/material.dart';
 
 class ResponsiveUtil {
   static bool isMobile(BuildContext context) {
-    return MediaQuery.of(context).size.width <= 430;
+    return MediaQuery.of(context).size.width <= 780;
   }
 
   static bool isTablet(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    return width > 430 && width <= 1024;
+    return width > 780 && width <= 1400;
   }
 
   static bool isDesktop(BuildContext context) {
-    return MediaQuery.of(context).size.width > 1024;
+    return MediaQuery.of(context).size.width > 1400;
   }
 
   static double getMultiplier(BuildContext context) {
     if (isMobile(context)) {
       return 0.45;
     } else if (isTablet(context)) {
-      return 0.70;
+      return 0.65;
     } else {
       return 1.0;
     }

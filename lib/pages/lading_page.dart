@@ -18,21 +18,44 @@ class HomePage extends StatelessWidget {
 
     double widthContainer = multiplier == 1.0
         ? 750
-        : multiplier == .70
-            ? 700
-            : width;
-    double heightContainer = multiplier == 1.0 ? 1200 : height;
+        : multiplier == .65
+            ? 440
+            : 200;
+
+    double heightContainer = multiplier == 1.0
+        ? 1200
+        : multiplier == .65
+            ? 900
+            : 750;
 
     double divisor = multiplier == 1.0 ? 3.5 : 3.0;
-    double spaceElement = multiplier == 1.0 ? 3 : 2.7;
+    double spaceElement = multiplier == 1.0
+        ? 3
+        : multiplier == .65
+            ? 2.8
+            : 2.8;
 
-    double widthMultiplier = multiplier == 1.0 ? 1.3 : 1.45;
-    double heightMultiplier = multiplier == 1.0 ? 1.3 : 1.12;
+    double widthMultiplier = multiplier == 1.0
+        ? 1.3
+        : multiplier == .65
+            ? 1.1
+            : 1.42;
+
+    double heightMultiplier = multiplier == 1.0
+        ? 1.3
+        : multiplier == .65
+            ? 1.15
+            : 1.10;
     double fontSize = multiplier == 1.0
         ? 1
-        : multiplier == 0.7
-            ? 1.8
-            : 3.86;
+        : multiplier == 0.65
+            ? 1.5
+            : 5.3;
+    double variant = multiplier == 1.0
+        ? 1.2
+        : multiplier == .65
+            ? 1.12
+            : 1.04;
 
     return SizedBox(
       width: width,
@@ -40,16 +63,16 @@ class HomePage extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            left: 0 * multiplier,
-            top: 0 * multiplier,
+            left: 0,
+            top: 0,
             child: SizedBox(
               width: width,
               height: height * multiplier,
               child: Stack(
                 children: [
                   Positioned(
-                    right: -210 * multiplier,
-                    top: -175.28 * multiplier,
+                    right: -120,
+                    top: -100,
                     child: SizedBox(
                       width: 700 * multiplier,
                       height: 500 * multiplier,
@@ -61,8 +84,8 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    left: -300 * multiplier,
-                    bottom: -260 * multiplier,
+                    left: -190,
+                    bottom: -200,
                     child: SizedBox(
                       width: 700 * multiplier,
                       height: 500 * multiplier,
@@ -74,9 +97,8 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    bottom: 0 * multiplier,
-                    left:
-                        multiplier == 1.0 ? 500 * multiplier : 100 * multiplier,
+                    bottom: 0,
+                    left: multiplier == 1.0 ? 500 : 300,
                     child: Container(
                       width: 380 * multiplier,
                       height: 650 * multiplier,
@@ -92,8 +114,8 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    right: 60 * multiplier,
-                    top: 70 * multiplier,
+                    right: 60,
+                    top: 70,
                     child: SizedBox(
                       width: 200 * multiplier,
                       height: 200 * multiplier,
@@ -106,7 +128,7 @@ class HomePage extends StatelessWidget {
                     child: SizedBox(
                       width: multiplier == .45
                           ? 140
-                          : multiplier == .70
+                          : multiplier == .65
                               ? 220
                               : 530,
                       height: multiplier == .45 ? 250 : 300,
@@ -118,12 +140,12 @@ class HomePage extends StatelessWidget {
                             child: Container(
                               width: multiplier == 1.0
                                   ? 250
-                                  : multiplier == .70
+                                  : multiplier == .65
                                       ? 180
                                       : 60,
                               height: multiplier == 1.0
                                   ? 180
-                                  : multiplier == .70
+                                  : multiplier == .65
                                       ? 150
                                       : 60,
                               decoration: const BoxDecoration(
@@ -139,7 +161,7 @@ class HomePage extends StatelessWidget {
                           Positioned(
                             right: multiplier == 1.0
                                 ? 190
-                                : multiplier == .70
+                                : multiplier == .65
                                     ? 0
                                     : 50,
                             top: multiplier == .45 ? 26 : 60,
@@ -168,19 +190,19 @@ class HomePage extends StatelessWidget {
                   ),
                   Positioned(
                     top: multiplier == 1.0
-                        ? 350 * multiplier
-                        : multiplier == .70
-                            ? 270 * multiplier
-                            : 180 * multiplier,
-                    left: 20 * multiplier,
+                        ? 350
+                        : multiplier == .65
+                            ? 190
+                            : 180,
+                    left: 20,
                     child: SizedBox(
                       width: 700 * multiplier,
                       height: 370 * multiplier,
                       child: Stack(
                         children: <Widget>[
                           Positioned(
-                            top: 0 * multiplier,
-                            left: 2 * multiplier,
+                            top: 0,
+                            left: 2,
                             child: SizedBox(
                               width: 750 * multiplier,
                               height: 40 * multiplier,
@@ -193,22 +215,22 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           Positioned(
-                            top: 12 * multiplier,
-                            left: 0 * multiplier,
+                            top: 12,
+                            left: 0,
                             child: SizedBox(
                               width: 650 * multiplier,
                               height: 105 * multiplier,
                               child: AnimationMainText(
                                   img: "MEET & GREET",
-                                  wiseAnimation: 400 * multiplier,
+                                  wiseAnimation: 400,
                                   fontSized: (89 / fontSize),
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 0),
                             ),
                           ),
                           Positioned(
-                            top: 100 * multiplier,
-                            left: 0 * multiplier,
+                            top: 100,
+                            left: 0,
                             child: SizedBox(
                               width: 650 * multiplier,
                               height: 105 * multiplier,
@@ -221,8 +243,8 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           Positioned(
-                            top: 190 * multiplier,
-                            left: 0 * multiplier,
+                            top: 190,
+                            left: 0,
                             child: Container(
                               alignment: Alignment.center,
                               width: 650 * multiplier,
@@ -235,43 +257,30 @@ class HomePage extends StatelessWidget {
                                   letterSpacing: 0),
                             ),
                           ),
-                          // Positioned(
-                          //   left: 0 * multiplier,
-                          //   bottom: 0 * multiplier,
-                          //   child: SizedBox(
-                          //     width: 140 * multiplier,
-                          //     height: 40 * multiplier,
-                          //     child: ButtonMain(
-                          //       heightB: 45 * multiplier,
-                          //       widthB: 120 * multiplier,
-                          //       title: 'Regístrate',
-                          //     ),
-                          //   ),
-                          // ),
                         ],
                       ),
                     ),
                   ),
                   Positioned(
-                    top:
-                        multiplier == 1.0 ? 40 * multiplier : -230 * multiplier,
-                    right:
-                        multiplier == 1.0 ? 25 * multiplier : 10 * multiplier,
+                    top: multiplier == 1.0
+                        ? 40
+                        : multiplier == .65
+                            ? -122
+                            : -80,
+                    right: multiplier == 1.0 ? 25 : 10,
                     child: SizedBox(
-                      width: widthContainer * widthMultiplier * multiplier,
-                      height: heightContainer * 1.2 * multiplier,
+                      width: widthContainer * widthMultiplier,
+                      height: heightContainer * variant,
                       child: Padding(
                         padding: const EdgeInsets.all(2),
                         child: Stack(
                           children: [
                             Positioned(
-                              left: 0 * multiplier,
-                              bottom: 0 * multiplier,
+                              left: 0,
+                              bottom: 0,
                               child: SizedBox(
-                                width: (widthContainer / divisor) * multiplier,
-                                height: heightContainer *
-                                    heightMultiplier *
-                                    multiplier,
+                                width: (widthContainer / divisor),
+                                height: heightContainer * heightMultiplier,
                                 child: const AnimationMain(
                                   img: 'assets/images/rectangle_15.png',
                                   wiseAnimation: 600,
@@ -279,14 +288,11 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                             Positioned(
-                              left:
-                                  (widthContainer / spaceElement) * multiplier,
-                              top: 0 * multiplier,
+                              left: (widthContainer / spaceElement),
+                              top: 0,
                               child: SizedBox(
-                                width: (widthContainer / divisor) * multiplier,
-                                height: heightContainer *
-                                    heightMultiplier *
-                                    multiplier,
+                                width: (widthContainer / divisor),
+                                height: heightContainer * heightMultiplier,
                                 child: const AnimationMain(
                                   img: 'assets/images/rectangle_7.png',
                                   wiseAnimation: -600,
@@ -294,15 +300,11 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                             Positioned(
-                              left: (widthContainer / spaceElement) *
-                                  2 *
-                                  multiplier,
-                              bottom: 0 * multiplier,
+                              left: (widthContainer / spaceElement) * 2,
+                              bottom: 0,
                               child: SizedBox(
-                                width: (widthContainer / divisor) * multiplier,
-                                height: heightContainer *
-                                    heightMultiplier *
-                                    multiplier,
+                                width: (widthContainer / divisor),
+                                height: heightContainer * heightMultiplier,
                                 child: const AnimationMain(
                                   img: 'assets/images/rectangle_9.png',
                                   wiseAnimation: 600,
@@ -310,13 +312,11 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                             Positioned(
-                              right: 0 * multiplier,
-                              top: 0 * multiplier,
+                              right: 0,
+                              top: 0,
                               child: SizedBox(
-                                width: (widthContainer / divisor) * multiplier,
-                                height: heightContainer *
-                                    heightMultiplier *
-                                    multiplier,
+                                width: (widthContainer / divisor),
+                                height: heightContainer * heightMultiplier,
                                 child: const AnimationMain(
                                   img: 'assets/images/rectangle_11.png',
                                   wiseAnimation: -600,
@@ -325,14 +325,14 @@ class HomePage extends StatelessWidget {
                             ),
                             Positioned(
                               right: multiplier == 1.0
-                                  ? 267 * multiplier
-                                  : multiplier == 0.7
-                                      ? 278 * multiplier
+                                  ? 267
+                                  : multiplier == 0.65
+                                      ? 135
                                       : 30,
                               bottom: multiplier == 1.0
-                                  ? 445 * multiplier
-                                  : multiplier == 0.7
-                                      ? 135 * multiplier
+                                  ? 445
+                                  : multiplier == 0.65
+                                      ? 50
                                       : -65,
                               child: SizedBox(
                                 width: 200 * multiplier,

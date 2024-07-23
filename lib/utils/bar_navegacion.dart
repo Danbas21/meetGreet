@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/sell_page.dart';
 import 'package:flutter_app/pages/invite_page.dart';
@@ -48,7 +47,7 @@ class BarNaviv extends StatelessWidget {
             'HOME',
             style: TextStyle(
               color: Colors.blueGrey,
-              fontSize: 17 * multiplier,
+              fontSize: 20 * multiplier,
               fontWeight: FontWeight.bold,
               fontFamily: 'Roboto',
             ),
@@ -67,7 +66,7 @@ class BarNaviv extends StatelessWidget {
             '¿QUE ES?',
             style: TextStyle(
               color: Colors.blueGrey,
-              fontSize: 17 * multiplier,
+              fontSize: 20 * multiplier,
               fontWeight: FontWeight.bold,
               fontFamily: 'Roboto',
             ),
@@ -86,7 +85,7 @@ class BarNaviv extends StatelessWidget {
             'INVITADOS',
             style: TextStyle(
               color: Colors.blueGrey,
-              fontSize: 17 * multiplier,
+              fontSize: 20 * multiplier,
               fontWeight: FontWeight.bold,
               fontFamily: 'Roboto',
             ),
@@ -105,7 +104,7 @@ class BarNaviv extends StatelessWidget {
             'HORARIOS',
             style: TextStyle(
               color: Colors.blueGrey,
-              fontSize: 17 * multiplier,
+              fontSize: 20 * multiplier,
               fontWeight: FontWeight.bold,
               fontFamily: 'Roboto',
             ),
@@ -124,7 +123,7 @@ class BarNaviv extends StatelessWidget {
             'BOLETOS',
             style: TextStyle(
               color: Colors.blueGrey,
-              fontSize: 17 * multiplier,
+              fontSize: 20 * multiplier,
               fontWeight: FontWeight.bold,
               fontFamily: 'Roboto',
             ),
