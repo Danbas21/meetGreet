@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
 
     return SizedBox(
       width: width,
-      height: height * multiplier,
+      height: height,
       child: Stack(
         children: [
           Positioned(
@@ -67,7 +67,7 @@ class HomePage extends StatelessWidget {
             top: 0,
             child: SizedBox(
               width: width,
-              height: height * multiplier,
+              height: height,
               child: Stack(
                 children: [
                   Positioned(
@@ -84,8 +84,16 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    left: -190,
-                    bottom: -200,
+                    left: multiplier == 1.0
+                        ? -190
+                        : multiplier == .65
+                            ? 500
+                            : -50,
+                    bottom: multiplier == 1.0
+                        ? -200
+                        : multiplier == .65
+                            ? 500
+                            : -50,
                     child: SizedBox(
                       width: 700 * multiplier,
                       height: 500 * multiplier,
@@ -98,7 +106,11 @@ class HomePage extends StatelessWidget {
                   ),
                   Positioned(
                     bottom: 0,
-                    left: multiplier == 1.0 ? 500 : 300,
+                    left: multiplier == 1.0
+                        ? 500
+                        : multiplier == 65
+                            ? 500
+                            : 50,
                     child: Container(
                       width: 380 * multiplier,
                       height: 650 * multiplier,

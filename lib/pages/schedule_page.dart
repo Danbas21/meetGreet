@@ -5,9 +5,14 @@ import 'package:flutter_app/utils/screen_utils.dart';
 import 'package:flutter_app/utils/widget_circulo.dart';
 import 'package:flutter_app/utils/widget_grid_cir.dart';
 
-class SchedulePage extends StatelessWidget {
+class SchedulePage extends StatefulWidget {
   const SchedulePage({super.key});
 
+  @override
+  State<SchedulePage> createState() => _SchedulePageState();
+}
+
+class _SchedulePageState extends State<SchedulePage> {
   @override
   Widget build(BuildContext context) {
     double multiplier = ResponsiveUtil.getMultiplier(context);
@@ -33,13 +38,32 @@ class SchedulePage extends StatelessWidget {
             : 12;
     double spaceElement = multiplier == 1.0 ? 1.8 : 1.4;
 
-    double widthMultiplier = multiplier == 1.0 ? 1.3 : 1.45;
-    double heightMultiplier = multiplier == 1.0 ? 1.3 : 1.12;
     double fontSize = multiplier == 1.0
         ? 1
         : multiplier == 0.7
             ? 1.8
             : 3.86;
+
+    void _showPopup(BuildContext context, String frontImage) {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return Dialog(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12.0)),
+            child: SizedBox(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.asset(
+                  frontImage,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          );
+        },
+      );
+    }
 
     return Scaffold(
         body: SingleChildScrollView(
@@ -213,13 +237,51 @@ class SchedulePage extends StatelessWidget {
                     margin: const EdgeInsets.all(2),
                     width: widthContainer,
                     height: heightContainer,
-                    child: Image.asset('assets/images/horarios1.jpg'),
+                    child: Stack(children: [
+                      Container(
+                        margin: const EdgeInsets.all(2),
+                        width: widthContainer,
+                        height: heightContainer,
+                        child: Image.asset('assets/images/horarios1.jpg',
+                            fit: BoxFit.fill),
+                      ),
+                      Positioned(
+                        bottom: 0,
+                        right: 0,
+                        child: IconButton(
+                          icon: const Icon(Icons.add_circle,
+                              color: Color.fromARGB(255, 226, 172, 10),
+                              size: 18),
+                          onPressed: () => _showPopup(
+                              context, 'assets/images/horarios1.jpg'),
+                        ),
+                      ),
+                    ]),
                   ),
                   Container(
                     margin: const EdgeInsets.all(2),
                     width: widthContainer,
                     height: heightContainer,
-                    child: Image.asset('assets/images/horarios2.jpg'),
+                    child: Stack(children: [
+                      Container(
+                        margin: const EdgeInsets.all(2),
+                        width: widthContainer,
+                        height: heightContainer,
+                        child: Image.asset('assets/images/horarios2.jpg',
+                            fit: BoxFit.fill),
+                      ),
+                      Positioned(
+                        bottom: 0,
+                        right: 0,
+                        child: IconButton(
+                          icon: const Icon(Icons.add_circle,
+                              color: Color.fromARGB(255, 226, 172, 10),
+                              size: 18),
+                          onPressed: () => _showPopup(
+                              context, 'assets/images/horarios2.jpg'),
+                        ),
+                      ),
+                    ]),
                   ),
                 ],
               ),

@@ -186,88 +186,198 @@ class ListInvites extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 60),
-                child: Center(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(7.0),
-                        child: SizedBox(
-                          width: widthContainer,
-                          height: heightContainer / divisor,
-                          child: Text(
-                            "Ídolos del Box",
-                            style: TextStyle(
-                              fontSize: (65 / fontSize),
-                              fontWeight: FontWeight.bold,
-                            ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(7.0),
+                      child: SizedBox(
+                        width: widthContainer,
+                        height: heightContainer / divisor,
+                        child: Text(
+                          "Ídolos del Box",
+                          style: TextStyle(
+                            fontSize: (65 / fontSize),
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                      SizedBox(
+                    ),
+                    Center(
+                      child: SizedBox(
                         width: widthContainer,
                         height: heightContainer,
                         child: ImageGrid(images: ListImages.listBox),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(7.0),
-                        child: SizedBox(
-                          width: widthContainer,
-                          height: heightContainer / divisor,
-                          child: Text(
-                            "Ídolos del Futbol",
-                            style: TextStyle(
-                              fontSize: (65 / fontSize),
-                              fontWeight: FontWeight.bold,
-                            ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(7.0),
+                      child: SizedBox(
+                        width: widthContainer,
+                        height: heightContainer / divisor,
+                        child: Text(
+                          "Ídolos del Futbol",
+                          style: TextStyle(
+                            fontSize: (65 / fontSize),
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                      SizedBox(
+                    ),
+                    Center(
+                      child: SizedBox(
                         width: widthContainer,
                         height: heightContainer,
                         child: ImageGrid(images: ListImages.listFut),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(7.0),
-                        child: SizedBox(
-                          width: widthContainer,
-                          height: heightContainer / divisor,
-                          child: Text(
-                            "Ídolos del Ring",
-                            style: TextStyle(
-                              fontSize: (65 / fontSize),
-                              fontWeight: FontWeight.bold,
-                            ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(7.0),
+                      child: SizedBox(
+                        width: widthContainer,
+                        height: heightContainer / divisor,
+                        child: Text(
+                          "Ídolos del Ring",
+                          style: TextStyle(
+                            fontSize: (65 / fontSize),
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                      SizedBox(
+                    ),
+                    Center(
+                      child: SizedBox(
                         width: widthContainer,
                         height: heightContainer,
                         child: ImageGrid(images: ListImages.listLuch),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(7.0),
-                        child: SizedBox(
-                          width: widthContainer,
-                          height: heightContainer / divisor,
-                          child: Text(
-                            "Estrellas del Deporte",
-                            style: TextStyle(
-                              fontSize: (65 / fontSize),
-                              fontWeight: FontWeight.bold,
-                            ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(7.0),
+                      child: SizedBox(
+                        width: widthContainer,
+                        height: heightContainer / divisor,
+                        child: Text(
+                          "Ídolos NFL",
+                          style: TextStyle(
+                            fontSize: (65 / fontSize),
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                      SizedBox(
+                    ),
+                    Center(
+                      child: SizedBox(
                         width: widthContainer,
                         height: heightContainer,
-                        child: ImageGrid(images: ListImages.listEstre),
+                        child: ImageGrid(images: ListImages.listNlf),
                       ),
-                    ],
-                  ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(7.0),
+                      child: SizedBox(
+                        width: widthContainer,
+                        height: heightContainer / divisor,
+                        child: Text(
+                          "Ídolos MMA y UFC",
+                          style: TextStyle(
+                            fontSize: (65 / fontSize),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Center(
+                      child: SizedBox(
+                        width: widthContainer,
+                        height: heightContainer,
+                        child: ImageGrid(images: ListImages.listUFC),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(7.0),
+                      child: SizedBox(
+                        width: widthContainer,
+                        height: heightContainer / divisor,
+                        child: Text(
+                          "La mejor raquetbolista del mundo :",
+                          style: TextStyle(
+                            fontSize: (65 / fontSize),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Center(
+                      child: SizedBox(
+                        width: widthContainer,
+                        height: heightContainer,
+                        child: ImageGrid(images: ListImages.listRacket),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(7.0),
+                      child: SizedBox(
+                        width: widthContainer,
+                        height: heightContainer / divisor,
+                        child: Text(
+                          "Ídolos NBA",
+                          style: TextStyle(
+                            fontSize: (65 / fontSize),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Center(
+                      child: SizedBox(
+                        width: widthContainer,
+                        height: heightContainer,
+                        child: ImageGrid(images: ListImages.listNba),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(7.0),
+                      child: SizedBox(
+                        width: widthContainer,
+                        height: heightContainer / divisor,
+                        child: Text(
+                          "Única mujer mexicana en WWE:",
+                          style: TextStyle(
+                            fontSize: (65 / fontSize),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Center(
+                      child: SizedBox(
+                        width: widthContainer,
+                        height: heightContainer,
+                        child: ImageGrid(images: ListImages.listWomanWwe),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(7.0),
+                      child: SizedBox(
+                        width: widthContainer,
+                        height: heightContainer / divisor,
+                        child: Text(
+                          "Invitado especial de la WBC :",
+                          style: TextStyle(
+                            fontSize: (65 / fontSize),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Center(
+                      child: SizedBox(
+                        width: widthContainer,
+                        height: heightContainer,
+                        child: ImageGrid(images: ListImages.listBBX),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Positioned(
