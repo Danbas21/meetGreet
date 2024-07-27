@@ -326,7 +326,7 @@ class HomePage extends StatelessWidget {
                         ? -190
                         : multiplier == .65
                             ? 150
-                            : 130,
+                            : 150,
                     right: multiplier == 1.0
                         ? 25
                         : multiplier == .65
@@ -336,7 +336,7 @@ class HomePage extends StatelessWidget {
                         ? null
                         : multiplier == .65
                             ? null
-                            : 30,
+                            : 10,
                     child: SizedBox(
                       width: widthContainer * widthMultiplier,
                       height: heightContainer * variant,
