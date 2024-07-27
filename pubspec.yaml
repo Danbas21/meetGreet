@@ -49,36 +49,36 @@ flutter:
     - assets/images/rectangle_20.jpeg
     - assets/images/rectangle_22.png
     - assets/images/rectangle_23.jpeg
-    - assets/images/box1/box1.png
-    - assets/images/box1/box2.png
-    - assets/images/box1/box3.png
-    - assets/images/box1/box4.png
-    - assets/images/box1/box5.png
-    - assets/images/box1/box6.png
-    - assets/images/box1/box7.png
-    - assets/images/box1/box8.png
-    - assets/images/fut/fut1.png
-    - assets/images/fut/fut2.png
-    - assets/images/fut/fut3.png
-    - assets/images/fut/fut4.png
-    - assets/images/fut/fut5.png
-    - assets/images/fut/fut6.png
-    - assets/images/fut/fut7.png
-    - assets/images/fut/fut8.png
-    - assets/images/fut/fut9.png
-    - assets/images/fut/fut10.png
-    - assets/images/luchas/luch1.png
-    - assets/images/luchas/luch2.png
-    - assets/images/luchas/luch3.png
-    - assets/images/luchas/luch4.png
-    - assets/images/luchas/luch5.png
-    - assets/images/estre/estre1.png
-    - assets/images/estre/estre2.png
-    - assets/images/estre/estre3.png
-    - assets/images/estre/estre4.png
-    - assets/images/estre/estre5.png
-    - assets/images/estre/estre6.png
-    - assets/images/estre/estre7.png
-    - assets/images/estre/estre8.png
+    - assets/images/fut/fut1.jpg
+    - assets/images/fut/fut2.jpg
+    - assets/images/fut/fut3.jpg
+    - assets/images/fut/fut4.jpg
+    - assets/images/fut/fut5.jpg
+    - assets/images/fut/fut6.jpg
+    - assets/images/fut/fut7.jpg
+    - assets/images/fut/fut8.jpg
+    - assets/images/fut/fut9.jpg
+    - assets/images/fut/fut10.jpg
+    - assets/images/box/box1.jpg
+    - assets/images/box/box2.jpg
+    - assets/images/box/box3.jpg
+    - assets/images/box/box4.jpg
+    - assets/images/box/box5.jpg
+    - assets/images/box/box6.jpg
+    - assets/images/box/box7.jpg
+    - assets/images/box/box8.jpg
+    - assets/images/box/box9.jpg
+    - assets/images/estre/estre1.jpg
+    - assets/images/estre/estre2.jpg
+    - assets/images/estre/estre3.jpg
+    - assets/images/estre/estre4.jpg
+    - assets/images/luchas/lucha1.jpg
+    - assets/images/luchas/lucha2.jpg
+    - assets/images/luchas/lucha3.jpg
+    - assets/images/luchas/lucha4.jpg
+    - assets/images/luchas/lucha5.jpg
+    - assets/images/luchas/lucha6.jpg
+    - assets/images/luchas/lucha7.jpg
+
     - assets/images/horarios1.jpg
     - assets/images/horarios2.jpg

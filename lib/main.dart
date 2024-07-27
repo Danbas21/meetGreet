@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/lading_page.dart';
 import 'package:flutter_app/pages/lading_page_2.dart';
 import 'package:flutter_app/pages/lading_page_3.dart';
+import 'package:flutter_app/utils/animation_card.dart';
 
 void main() => runApp(const MyApp());
 

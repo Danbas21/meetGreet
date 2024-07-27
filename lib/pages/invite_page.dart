@@ -244,7 +244,7 @@ class ListInvites extends StatelessWidget {
                       ),
                       SizedBox(
                         width: widthContainer,
-                        height: heightContainer / 2,
+                        height: heightContainer,
                         child: ImageGrid(images: ListImages.listLuch),
                       ),
                       Padding(

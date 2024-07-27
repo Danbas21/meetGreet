@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/utils/animation_card.dart';
 
 class ImageGrid extends StatelessWidget {
   final List<String> images;
@@ -8,84 +9,19 @@ class ImageGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      child: GridView.builder(
-        padding: const EdgeInsets.all(8),
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount:
-              images.length <= 5 ? images.length : images.length ~/ 2,
-          crossAxisSpacing: 22,
-          mainAxisSpacing: 22,
-        ),
-        itemCount: images.length,
-        itemBuilder: (context, index) {
-          return HoverContainer(
-            child: Image.asset(
-              images[index % images.length],
-              fit: BoxFit.fill,
+        child: GridView.builder(
+            scrollDirection: Axis.vertical,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3,
+              crossAxisSpacing: 22,
+              mainAxisSpacing: 22,
             ),
-          );
-        },
-      ),
-    );
-  }
-}
-
-class ImageGrid1 extends StatelessWidget {
-  final List<String> images;
-
-  const ImageGrid1({super.key, required this.images});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      child: GridView.builder(
-        padding: const EdgeInsets.all(10),
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount:
-              images.length <= 5 ? images.length : images.length ~/ 2,
-          crossAxisSpacing: 20,
-          mainAxisSpacing: 22,
-        ),
-        itemCount: images.length,
-        itemBuilder: (context, index) {
-          return HoverContainer(
-            child: Image.asset(
-              images[index % images.length],
-              fit: BoxFit.contain,
-            ),
-          );
-        },
-      ),
-    );
-  }
-}
-
-class HoverContainer extends StatefulWidget {
-  final Widget child;
-
-  const HoverContainer({super.key, required this.child});
-
-  @override
-  HoverContainerState createState() => HoverContainerState();
-}
-
-class HoverContainerState extends State<HoverContainer> {
-  bool _isHovered = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return MouseRegion(
-      onEnter: (_) => setState(() => _isHovered = true),
-      onExit: (_) => setState(() => _isHovered = false),
-      cursor: SystemMouseCursors.grab,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeInOutBack,
-        transform:
-            _isHovered ? Matrix4.identity().scaled(1.03) : Matrix4.identity(),
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
-        child: widget.child,
-      ),
-    );
+            itemCount: images.length,
+            itemBuilder: (context, index) {
+              return ImagenRotableCard(
+                frontImage: images[index % images.length],
+                description: images[index % images.length],
+              );
+            }));
   }
 }
