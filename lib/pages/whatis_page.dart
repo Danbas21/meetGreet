@@ -18,12 +18,16 @@ class WhatIsPage extends StatelessWidget {
 
     double widthContainer = multiplier == 1.0
         ? 750
-        : multiplier == .70
+        : multiplier == .65
             ? 700
             : width;
     double heightContainer = multiplier == 1.0 ? 1200 : height;
 
-    double divisor = multiplier == 1.0 ? 1 : 1.4;
+    double divisor = multiplier == 1.0
+        ? 1
+        : multiplier == .65
+            ? 1.4
+            : 2;
     double spaceElement = multiplier == 1.0 ? 3 : 2.7;
 
     double widthMultiplier = multiplier == 1.0 ? 1.3 : 1.45;
@@ -41,64 +45,93 @@ class WhatIsPage extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-              left: -214 * multiplier,
-              top: -288 * multiplier,
+              left: multiplier == 1
+                  ? 700
+                  : multiplier == .65
+                      ? -214
+                      : 0,
+              top: multiplier == 1
+                  ? 700
+                  : multiplier == .65
+                      ? -288
+                      : -200,
               child: SizedBox(
-                width: 528 * multiplier,
-                height: 571 * multiplier,
+                width: 950 * multiplier,
+                height: 950 * multiplier,
                 child: Circumference(
-                  widthC: 528 * multiplier,
-                  heightC: 571 * multiplier,
-                  opacity: 100,
-                ),
-              ),
-            ),
-            Positioned(
-              right: 0 * multiplier,
-              bottom: -420 * multiplier,
-              child: SizedBox(
-                width: 700 * multiplier,
-                height: 900 * multiplier,
-                child: Circumference2(
-                  widthC: 700 * multiplier,
+                  widthC: 900 * multiplier,
                   heightC: 900 * multiplier,
                   opacity: 100,
                 ),
               ),
             ),
             Positioned(
-              left: 90 * multiplier,
-              top: 290 * multiplier,
+              right: 0,
+              bottom: multiplier == 1
+                  ? 700
+                  : multiplier == .65
+                      ? -420
+                      : -250,
               child: SizedBox(
-                width: 120 * multiplier,
-                height: 65 * multiplier,
-                child: const CirculosEnGrid(),
-              ),
-            ),
-            Positioned(
-              left: -300 * multiplier,
-              top: 700 * multiplier,
-              child: SizedBox(
-                width: 500 * multiplier,
-                height: 500 * multiplier,
-                child: Circumference(
-                  widthC: 700 * multiplier,
-                  heightC: 645 * multiplier,
-                  opacity: 200,
+                width: 950 * multiplier,
+                height: 950 * multiplier,
+                child: Circumference2(
+                  widthC: 900 * multiplier,
+                  heightC: 900 * multiplier,
+                  opacity: 50,
                 ),
               ),
             ),
             Positioned(
               left: multiplier == 1.0
                   ? 160
-                  : multiplier == .70
-                      ? 220
+                  : multiplier == .65
+                      ? 350
                       : 40,
               top: multiplier == 1.0
                   ? 18
-                  : multiplier == .70
-                      ? -170
-                      : -35,
+                  : multiplier == .65
+                      ? 80
+                      : 90,
+              child: SizedBox(
+                width: 250 * multiplier,
+                height: 250 * multiplier,
+                child: const CirculosEnGrid(),
+              ),
+            ),
+            Positioned(
+              left: -300,
+              top: multiplier == 1
+                  ? 700
+                  : multiplier == .65
+                      ? 700
+                      : 323,
+              child: SizedBox(
+                width: 950 * multiplier,
+                height: 950 * multiplier,
+                child: Circumference(
+                  widthC: 900 * multiplier,
+                  heightC: 900 * multiplier,
+                  opacity: 50,
+                ),
+              ),
+            ),
+            Positioned(
+              left: multiplier == 1.0
+                  ? 160
+                  : multiplier == .65
+                      ? null
+                      : 80,
+              top: multiplier == 1.0
+                  ? 18
+                  : multiplier == .65
+                      ? -25
+                      : 30,
+              right: multiplier == 1.0
+                  ? 18
+                  : multiplier == .65
+                      ? 0
+                      : null,
               child: Container(
                 width: widthContainer / divisor,
                 height: heightContainer / divisor,
@@ -130,26 +163,39 @@ class WhatIsPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: 290 * multiplier,
-              bottom: 20 * multiplier,
+              right: 290,
+              bottom: 20,
               child: SizedBox(
-                width: 120 * multiplier,
-                height: 65 * multiplier,
+                width: 250 * multiplier,
+                height: 250 * multiplier,
                 child: const CirculosEnGrid(),
               ),
             ),
             Positioned(
-              left: 50 * multiplier,
-              bottom: 0 * multiplier,
+              left: multiplier == 1.0
+                  ? 160
+                  : multiplier == .65
+                      ? 0
+                      : 40,
+              top: multiplier == 1.0
+                  ? 18
+                  : multiplier == .65
+                      ? null
+                      : -35,
+              bottom: multiplier == 1.0
+                  ? 18
+                  : multiplier == .65
+                      ? 0
+                      : -35,
               child: Container(
-                width: 382 * multiplier,
-                height: 600 * multiplier,
+                width: 250 * multiplier,
+                height: 850 * multiplier,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(
                         'assets/images/rectangle_1.png',
                       ),
-                      fit: BoxFit.fitHeight,
+                      fit: BoxFit.fill,
                       opacity: .15),
                 ),
               ),
@@ -157,13 +203,13 @@ class WhatIsPage extends StatelessWidget {
             Positioned(
               left: multiplier == 1.0
                   ? 1100
-                  : multiplier == 0.7
+                  : multiplier == 0.65
                       ? 150
                       : 10,
               bottom: multiplier == 1.0
                   ? 140
-                  : multiplier == 0.7
-                      ? -390
+                  : multiplier == 0.65
+                      ? -300
                       : -220,
               child: SizedBox(
                 width: widthContainer,
@@ -198,12 +244,17 @@ class WhatIsPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: multiplier == .7 ? 300 : 2,
+              right: multiplier == .65 ? null : 2,
               top: multiplier == 1
                   ? 700
-                  : multiplier == .7
+                  : multiplier == .65
                       ? 600
                       : 323,
+              left: multiplier == 1
+                  ? 700
+                  : multiplier == .65
+                      ? 20
+                      : 20,
               child: SizedBox(
                 width: 800 * multiplier,
                 height: 400 * multiplier,

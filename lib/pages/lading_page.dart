@@ -134,11 +134,19 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    right: 60,
-                    top: 70,
+                    right: multiplier == 1.0
+                        ? 500
+                        : multiplier == .65
+                            ? 60
+                            : 20,
+                    top: multiplier == 1.0
+                        ? 500
+                        : multiplier == .65
+                            ? 70
+                            : 40,
                     child: SizedBox(
-                      width: 200 * multiplier,
-                      height: 200 * multiplier,
+                      width: 250 * multiplier,
+                      height: 250 * multiplier,
                       child: const CirculosEnGrid(),
                     ),
                   ),
@@ -325,7 +333,7 @@ class HomePage extends StatelessWidget {
                     top: multiplier == 1.0
                         ? -190
                         : multiplier == .65
-                            ? 150
+                            ? 200
                             : 150,
                     right: multiplier == 1.0
                         ? 25
@@ -397,16 +405,16 @@ class HomePage extends StatelessWidget {
                                   ? 267
                                   : multiplier == 0.65
                                       ? null
-                                      : 30,
+                                      : 0,
                               bottom: multiplier == 1.0
                                   ? 445
                                   : multiplier == 0.65
                                       ? -15
-                                      : -65,
+                                      : 0,
                               left: multiplier == .65 ? 450 : null,
                               child: SizedBox(
-                                width: 200 * multiplier,
-                                height: 200 * multiplier,
+                                width: 250 * multiplier,
+                                height: 250 * multiplier,
                                 child: const CirculosEnGrid(),
                               ),
                             ),

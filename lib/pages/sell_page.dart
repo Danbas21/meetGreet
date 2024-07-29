@@ -18,7 +18,7 @@ class SellTicket extends StatelessWidget {
 
     double fontSize = multiplier == 1.0
         ? 1
-        : multiplier == 0.7
+        : multiplier == 0.65
             ? 1.5
             : 2;
 
@@ -32,8 +32,8 @@ class SellTicket extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-              left: -200 * multiplier,
-              bottom: 1000 * multiplier,
+              left: -200,
+              bottom: 1000,
               child: SizedBox(
                 width: 800 * multiplier,
                 height: 800 * multiplier,
@@ -45,8 +45,8 @@ class SellTicket extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: -200 * multiplier,
-              bottom: 1100 * multiplier,
+              left: -200,
+              bottom: 1100,
               child: SizedBox(
                 width: 600 * multiplier,
                 height: 600 * multiplier,
@@ -58,8 +58,8 @@ class SellTicket extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: -250 * multiplier,
-              top: 1000 * multiplier,
+              right: -250,
+              top: 1000,
               child: SizedBox(
                 width: 800 * multiplier,
                 height: 800 * multiplier,
@@ -71,11 +71,11 @@ class SellTicket extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 90 * multiplier,
-              top: 950 * multiplier,
+              left: 90,
+              top: 950,
               child: SizedBox(
-                width: 200 * multiplier,
-                height: 200 * multiplier,
+                width: 250 * multiplier,
+                height: 250 * multiplier,
                 child: const CirculosEnGrid(),
               ),
             ),
@@ -93,8 +93,8 @@ class SellTicket extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: -200 * multiplier,
-              top: -250 * multiplier,
+              left: -200,
+              top: -250,
               child: SizedBox(
                 width: 800 * multiplier,
                 height: 800 * multiplier,
@@ -106,8 +106,8 @@ class SellTicket extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: 90 * multiplier,
-              top: 290 * multiplier,
+              right: 90,
+              top: 290,
               child: SizedBox(
                 width: 200 * multiplier,
                 height: 200 * multiplier,
@@ -115,8 +115,8 @@ class SellTicket extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: -200 * multiplier,
-              top: -270 * multiplier,
+              left: -200,
+              top: -270,
               child: SizedBox(
                 width: 600 * multiplier,
                 height: 600,
@@ -128,8 +128,8 @@ class SellTicket extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: -200 * multiplier,
-              bottom: -250 * multiplier,
+              right: -200,
+              bottom: -250,
               child: SizedBox(
                 width: 800 * multiplier,
                 height: 800 * multiplier,
@@ -141,8 +141,8 @@ class SellTicket extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 90 * multiplier,
-              bottom: 290 * multiplier,
+              left: 90,
+              bottom: 290,
               child: SizedBox(
                 width: 200 * multiplier,
                 height: 200 * multiplier,
@@ -151,7 +151,7 @@ class SellTicket extends StatelessWidget {
             ),
             Positioned(
               right: -200,
-              bottom: -270 * multiplier,
+              bottom: -270,
               child: SizedBox(
                 width: 600 * multiplier,
                 height: 600 * multiplier,
@@ -165,12 +165,12 @@ class SellTicket extends StatelessWidget {
             Positioned(
               left: multiplier == 1.0
                   ? 80
-                  : multiplier == .70
+                  : multiplier == .65
                       ? 30
                       : 10,
               top: multiplier == 1.0
                   ? 400
-                  : multiplier == .70
+                  : multiplier == .65
                       ? 430
                       : 330,
               child: SizedBox(
@@ -190,12 +190,12 @@ class SellTicket extends StatelessWidget {
             Positioned(
               left: multiplier == 1.0
                   ? 30
-                  : multiplier == .70
+                  : multiplier == .65
                       ? 30
                       : 10,
               top: multiplier == 1.0
                   ? 160
-                  : multiplier == .70
+                  : multiplier == .65
                       ? 30
                       : 45,
               child: SizedBox(
@@ -215,13 +215,13 @@ class SellTicket extends StatelessWidget {
             Positioned(
               left: multiplier == 1.0
                   ? 115
-                  : multiplier == .7
-                      ? 95
+                  : multiplier == .65
+                      ? 35
                       : 15,
               top: multiplier == 1
                   ? 470
-                  : multiplier == .7
-                      ? 470
+                  : multiplier == .65
+                      ? 550
                       : 420,
               child: SizedBox(
                 width: 800 * multiplier,
@@ -265,12 +265,12 @@ class SellTicket extends StatelessWidget {
             Positioned(
               right: multiplier == 1.0
                   ? 15
-                  : multiplier == .7
-                      ? -100
-                      : -10,
+                  : multiplier == .65
+                      ? -35
+                      : -5,
               top: multiplier == 1.0
                   ? 520
-                  : multiplier == .7
+                  : multiplier == .65
                       ? 480
                       : 150,
               child: SizedBox(
@@ -292,13 +292,13 @@ class SellTicket extends StatelessWidget {
             Positioned(
               left: multiplier == 1.0
                   ? 600
-                  : multiplier == .7
+                  : multiplier == .65
                       ? 80
                       : 10,
               bottom: multiplier == 1.0
                   ? 400
-                  : multiplier == .7
-                      ? 530
+                  : multiplier == .65
+                      ? 450
                       : 40,
               child: SizedBox(
                 child: ButtonMain(

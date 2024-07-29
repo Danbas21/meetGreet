@@ -16,19 +16,19 @@ class LandingPage2 extends StatelessWidget {
     double widthContainer = multiplier == 1.0
         ? 750
         : multiplier == .65
-            ? 650
+            ? 655
             : 250;
     double heightContainer = multiplier == 1.0
         ? 980
         : multiplier == .65
-            ? 600
+            ? 700
             : 750;
 
     double divisor = multiplier == 1.0 ? 3.5 : 3.0;
     double spaceElement = multiplier == 1.0
         ? 3
-        : multiplier == 0.70
-            ? 2.8
+        : multiplier == 0.65
+            ? 2.9
             : 2.8;
 
     double widthMultiplier = multiplier == 1.0
@@ -39,7 +39,7 @@ class LandingPage2 extends StatelessWidget {
     double heightMultiplier = multiplier == 1.0
         ? 1.3
         : multiplier == .65
-            ? 1.10
+            ? 1.5
             : 1.10;
     double fontSize = multiplier == 1.0
         ? 1
@@ -50,7 +50,7 @@ class LandingPage2 extends StatelessWidget {
     double variant = multiplier == 1.0
         ? 1.2
         : multiplier == .65
-            ? 1.12
+            ? 1.04
             : 1.04;
 
     return SizedBox(
@@ -70,12 +70,12 @@ class LandingPage2 extends StatelessWidget {
                     left: multiplier == 1.0
                         ? -190
                         : multiplier == .65
-                            ? -100
+                            ? -108
                             : -190,
                     top: multiplier == 1.0
                         ? -190
                         : multiplier == .65
-                            ? -100
+                            ? -300
                             : -190,
                     child: SizedBox(
                       width: 800 * multiplier,
@@ -88,18 +88,22 @@ class LandingPage2 extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    right: 5,
+                    right: multiplier == 1.0
+                        ? 0
+                        : multiplier == 0.65
+                            ? -40
+                            : 0,
                     bottom: multiplier == 1.0
                         ? 1.3
                         : multiplier == .65
-                            ? 1.42
-                            : -250,
+                            ? -180
+                            : -210,
                     child: SizedBox(
-                      width: 750 * multiplier,
+                      width: 950 * multiplier,
                       height: 950 * multiplier,
                       child: Circumference2(
-                        widthC: 700 * multiplier,
-                        heightC: 800 * multiplier,
+                        widthC: 900 * multiplier,
+                        heightC: 900 * multiplier,
                         opacity: 100,
                       ),
                     ),
@@ -108,8 +112,8 @@ class LandingPage2 extends StatelessWidget {
                     right: 90,
                     top: 290,
                     child: SizedBox(
-                      width: 200 * multiplier,
-                      height: 200 * multiplier,
+                      width: 250 * multiplier,
+                      height: 250 * multiplier,
                       child: const CirculosEnGrid(),
                     ),
                   ),
@@ -117,77 +121,80 @@ class LandingPage2 extends StatelessWidget {
                     top: multiplier == 1.0
                         ? -190
                         : multiplier == .65
-                            ? null
+                            ? 250
                             : 50,
                     right: multiplier == 1.0
                         ? 25
                         : multiplier == .65
-                            ? 10
+                            ? 0
                             : null,
                     left: multiplier == 1.0
                         ? null
                         : multiplier == .65
-                            ? null
+                            ? 0
                             : 10,
                     bottom: multiplier == 1.0
                         ? null
                         : multiplier == .65
-                            ? 190
+                            ? 0
                             : null,
-                    child: SizedBox(
-                      width: widthContainer * widthMultiplier,
-                      height: heightContainer * variant,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            left: 0,
-                            bottom: 0,
-                            child: SizedBox(
-                              width: (widthContainer / divisor),
-                              height: heightContainer * heightMultiplier,
-                              child: Image.asset(
-                                'assets/images/rectangle.png',
-                                fit: BoxFit.contain,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        width: widthContainer * widthMultiplier,
+                        height: heightContainer * variant,
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              left: 0,
+                              bottom: 0,
+                              child: SizedBox(
+                                width: (widthContainer / divisor),
+                                height: heightContainer * heightMultiplier,
+                                child: Image.asset(
+                                  'assets/images/rectangle.png',
+                                  fit: BoxFit.contain,
+                                ),
                               ),
                             ),
-                          ),
-                          Positioned(
-                            left: (widthContainer / spaceElement),
-                            top: 0,
-                            child: SizedBox(
-                              width: (widthContainer / divisor),
-                              height: heightContainer * heightMultiplier,
-                              child: Image.asset(
-                                'assets/images/rectangle_13.png',
-                                fit: BoxFit.contain,
+                            Positioned(
+                              left: (widthContainer / spaceElement),
+                              top: 0,
+                              child: SizedBox(
+                                width: (widthContainer / divisor),
+                                height: heightContainer * heightMultiplier,
+                                child: Image.asset(
+                                  'assets/images/rectangle_13.png',
+                                  fit: BoxFit.contain,
+                                ),
                               ),
                             ),
-                          ),
-                          Positioned(
-                            left: (widthContainer / spaceElement) * 2,
-                            bottom: 0,
-                            child: SizedBox(
-                              width: (widthContainer / divisor),
-                              height: heightContainer * heightMultiplier,
-                              child: Image.asset(
-                                'assets/images/rectangle_10.png',
-                                fit: BoxFit.contain,
+                            Positioned(
+                              left: (widthContainer / spaceElement) * 2,
+                              bottom: 0,
+                              child: SizedBox(
+                                width: (widthContainer / divisor),
+                                height: heightContainer * heightMultiplier,
+                                child: Image.asset(
+                                  'assets/images/rectangle_10.png',
+                                  fit: BoxFit.contain,
+                                ),
                               ),
                             ),
-                          ),
-                          Positioned(
-                            right: 0,
-                            top: 0,
-                            child: SizedBox(
-                              width: (widthContainer / divisor),
-                              height: heightContainer * heightMultiplier,
-                              child: Image.asset(
-                                'assets/images/rectangl.png',
-                                fit: BoxFit.contain,
+                            Positioned(
+                              right: 0,
+                              top: 0,
+                              child: SizedBox(
+                                width: (widthContainer / divisor),
+                                height: heightContainer * heightMultiplier,
+                                child: Image.asset(
+                                  'assets/images/rectangl.png',
+                                  fit: BoxFit.contain,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -212,51 +219,58 @@ class LandingPage2 extends StatelessWidget {
                     top: multiplier == 1.0
                         ? 1.3
                         : multiplier == .65
-                            ? 1.20
-                            : 120,
+                            ? 200
+                            : 140,
                     right: multiplier == .45
                         ? null
-                        : multiplier == .70
-                            ? -10
+                        : multiplier == .65
+                            ? null
                             : null,
                     left: multiplier == .45
                         ? 10
-                        : multiplier == .70
-                            ? -10
+                        : multiplier == .65
+                            ? 0
                             : null,
-                    child: SizedBox(
-                      width: 800 * multiplier,
-                      height: 200 * multiplier,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            left: 50,
-                            top: 0 * multiplier,
-                            child: SizedBox(
-                              width: 750 * multiplier,
-                              height: 170 * multiplier,
-                              child: Text(
-                                'Expo Reforma\nAv. Morelos 67, Juárez, Cuauhtémoc,\n C.P.06600 Ciudad de México, CDMX',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: (60 / fontSize),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        width: 1300 * multiplier,
+                        height: 220 * multiplier,
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              right: multiplier == .45
+                                  ? 10
+                                  : multiplier == .65
+                                      ? 0
+                                      : null,
+                              top: 0,
+                              child: SizedBox(
+                                width: 1100 * multiplier,
+                                height: 470 * multiplier,
+                                child: Text(
+                                  'Expo Reforma\nAv. Morelos 67, Juárez, Cuauhtémoc,\n C.P.06600 Ciudad de México, CDMX',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: (60 / fontSize),
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          Positioned(
-                            left: 0,
-                            bottom: 30,
-                            child: SizedBox(
-                              width: 120 * multiplier,
-                              height: 120 * multiplier,
-                              child: Image.asset(
-                                'assets/images/maps.png',
+                            Positioned(
+                              left: 0,
+                              bottom: 30,
+                              child: SizedBox(
+                                width: 140 * multiplier,
+                                height: 140 * multiplier,
+                                child: Image.asset(
+                                  'assets/images/maps.png',
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),

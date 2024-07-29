@@ -16,12 +16,12 @@ class LadingPage3 extends StatelessWidget {
 
     double widthContainer = multiplier == 1.0
         ? 1850
-        : multiplier == .70
-            ? 970
+        : multiplier == .65
+            ? width
             : width;
     double heightContainer = multiplier == 1.0
         ? 1700
-        : multiplier == .70
+        : multiplier == .65
             ? 1000
             : width;
 
@@ -29,7 +29,7 @@ class LadingPage3 extends StatelessWidget {
 
     double divisor = multiplier == 1.0
         ? 2.8
-        : multiplier == .7
+        : multiplier == .65
             ? 2.2
             : 1.4;
     double spaceElement = multiplier == 1.0 ? 3 : 2.7;
@@ -38,27 +38,34 @@ class LadingPage3 extends StatelessWidget {
 
     double fontSize = multiplier == 1.0
         ? 1
-        : multiplier == 0.7
+        : multiplier == 0.65
             ? 1.8
             : 3.86;
 
     return SizedBox(
       width: width,
-      height: height * multiplier,
+      height: height,
       child: Stack(
         children: [
           Positioned(
-              left: 0 * multiplier,
-              top: 0 * multiplier,
+              left: 0,
+              top: 0,
               child: SizedBox(
                 width: width,
-                height: height * multiplier,
+                height: height,
                 child: Stack(
                   children: [
                     Positioned(
-                      right: 5 * multiplier,
-                      top: -470 * multiplier,
-                      left: 250 * multiplier,
+                      right: multiplier == 1.0
+                          ? 0
+                          : multiplier == 0.65
+                              ? -40
+                              : 0,
+                      top: multiplier == 1.0
+                          ? 0
+                          : multiplier == 0.65
+                              ? -440
+                              : -205,
                       child: SizedBox(
                         width: 950 * multiplier,
                         height: 950 * multiplier,
@@ -70,11 +77,11 @@ class LadingPage3 extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      left: -300 * multiplier,
-                      bottom: -300 * multiplier,
+                      left: -250,
+                      bottom: -250,
                       child: SizedBox(
-                        width: 750 * multiplier,
-                        height: 750 * multiplier,
+                        width: 950 * multiplier,
+                        height: 950 * multiplier,
                         child: Circumference2(
                           widthC: 900 * multiplier,
                           heightC: 900 * multiplier,
@@ -83,26 +90,34 @@ class LadingPage3 extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      left: 50 * multiplier,
-                      bottom: 100 * multiplier,
+                      left: 40,
+                      bottom: 90,
                       child: SizedBox(
-                        width: 145 * multiplier,
-                        height: 80 * multiplier,
+                        width: 250 * multiplier,
+                        height: 250 * multiplier,
                         child: CirculosEnGrid(),
                       ),
                     ),
                     Positioned(
-                      right: 430 * multiplier,
-                      top: 120 * multiplier,
+                      right: multiplier == 1.0
+                          ? 0
+                          : multiplier == 0.65
+                              ? 430
+                              : 10,
+                      top: 120,
                       child: SizedBox(
-                        width: 145 * multiplier,
-                        height: 80 * multiplier,
+                        width: 250 * multiplier,
+                        height: 250 * multiplier,
                         child: CirculosEnGrid(),
                       ),
                     ),
                     Positioned(
-                      left: 30 * multiplier,
-                      top: 200 * multiplier,
+                      left: 10,
+                      bottom: multiplier == 1.0
+                          ? 0
+                          : multiplier == 0.65
+                              ? 500
+                              : 200,
                       child: SizedBox(
                         width: widthContainer,
                         height: heightContainer / divisor,
@@ -141,57 +156,68 @@ class Photos4 extends StatelessWidget {
     double multiplier = ResponsiveUtil.getMultiplier(context);
     double widthContainer = multiplier == 1.0
         ? 1900
-        : multiplier == .70
+        : multiplier == .65
             ? 970
             : width;
     double heightContainer = multiplier == 1.0
         ? 700
-        : multiplier == .70
-            ? 350
-            : 200;
+        : multiplier == .65
+            ? 360
+            : 270;
 
-    double heightMultiplier = multiplier == 1.0 ? 1.3 : 2;
-    double divisor = multiplier == 1.0 ? 3.5 : 1.4;
+    double divisor = multiplier == 1.0
+        ? 3.5
+        : multiplier == 0.65
+            ? 1.09
+            : 1.75;
+
     double fontSize = multiplier == 1.0
         ? 1
-        : multiplier == 0.7
+        : multiplier == 0.65
             ? 1.8
             : 3;
 
     return SizedBox(
       width: widthContainer / divisor,
-      height: heightContainer * heightMultiplier,
-      child: Stack(children: [
-        Positioned(
-          left: multiplier == 1.0
-              ? 40
-              : multiplier == 0.7
-                  ? 200
-                  : 70,
-          bottom: 0,
-          child: SizedBox(
-            width: widthContainer,
-            height: 100,
-            child: Text(
-              'MEET AND GREET',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: (50 / fontSize),
-                fontFamily: 'Roboto',
-                fontWeight: FontWeight.w700,
+      height: heightContainer,
+      child: Stack(
+        children: [
+          Positioned(
+            left: multiplier == 1.0
+                ? 40
+                : multiplier == 0.65
+                    ? 200
+                    : 20,
+            bottom: multiplier == 1.0
+                ? 500
+                : multiplier == .65
+                    ? 20
+                    : 0,
+            child: SizedBox(
+              width: widthContainer,
+              height: 65,
+              child: Text(
+                'MEET AND GREET',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: (50 / fontSize),
+                  fontFamily: 'Roboto',
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
           ),
-        ),
-        Positioned(
+          Positioned(
             left: 0,
             top: 0,
             child: SizedBox(
               width: widthContainer / divisor,
               height: heightContainer,
               child: Image.asset('assets/images/rectangle_20.jpeg'),
-            ))
-      ]),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -205,20 +231,20 @@ class Photos1 extends StatelessWidget {
     double multiplier = ResponsiveUtil.getMultiplier(context);
     double widthContainer = multiplier == 1.0
         ? 1900
-        : multiplier == .70
+        : multiplier == .65
             ? 970
             : width;
     double heightContainer = multiplier == 1.0
         ? 700
-        : multiplier == .70
-            ? 350
+        : multiplier == .65
+            ? 360
             : 200;
 
     double heightMultiplier = multiplier == 1.0 ? 1.3 : 2;
     double divisor = multiplier == 1.0 ? 3.5 : 1.4;
     double fontSize = multiplier == 1.0
         ? 1
-        : multiplier == 0.7
+        : multiplier == 0.65
             ? 1.8
             : 3;
 
@@ -229,13 +255,13 @@ class Photos1 extends StatelessWidget {
         Positioned(
           left: multiplier == 1.0
               ? 40
-              : multiplier == 0.7
+              : multiplier == 0.65
                   ? 200
                   : 70,
           bottom: 0,
           child: SizedBox(
             width: widthContainer,
-            height: 100,
+            height: 60,
             child: Text(
               'PRÓXIMOS EVENTOS',
               style: TextStyle(
@@ -248,8 +274,8 @@ class Photos1 extends StatelessWidget {
           ),
         ),
         Positioned(
-            left: 0 * multiplier,
-            top: 0 * multiplier,
+            left: 0,
+            top: 0,
             child: SizedBox(
               width: widthContainer / divisor,
               height: heightContainer,
@@ -271,20 +297,24 @@ class Photos2 extends StatelessWidget {
     double multiplier = ResponsiveUtil.getMultiplier(context);
     double widthContainer = multiplier == 1.0
         ? 1900
-        : multiplier == .70
+        : multiplier == .65
             ? 970
             : width;
     double heightContainer = multiplier == 1.0
         ? 700
-        : multiplier == .70
+        : multiplier == .65
             ? 350
             : 200;
 
     double heightMultiplier = multiplier == 1.0 ? 1.3 : 1.9;
-    double divisor = multiplier == 1.0 ? 2 : 1.3;
+    double divisor = multiplier == 1.0
+        ? 500
+        : multiplier == .65
+            ? 1.3
+            : 1.3;
     double fontSize = multiplier == 1.0
         ? 1
-        : multiplier == 0.7
+        : multiplier == 0.65
             ? 1.8
             : 3;
 
@@ -325,13 +355,13 @@ class Photos2 extends StatelessWidget {
           Positioned(
             left: multiplier == 1.0
                 ? 40
-                : multiplier == 0.7
+                : multiplier == 0.65
                     ? 200
                     : 50,
-            bottom: 5,
+            bottom: 0,
             child: SizedBox(
               width: widthContainer,
-              height: 100,
+              height: 65,
               child: Text(
                 'ARTÍCULOS COLECCIONABLES',
                 textAlign: TextAlign.start,

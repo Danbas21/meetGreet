@@ -22,25 +22,25 @@ class _SchedulePageState extends State<SchedulePage> {
 
     double widthContainer = multiplier == 1.0
         ? 2000
-        : multiplier == .70
+        : multiplier == .65
             ? 900
             : 350;
     double heightContainer = multiplier == 1.0
         ? 800
-        : multiplier == .70
+        : multiplier == .65
             ? 400
             : 200;
 
     double divisor = multiplier == 1.0
         ? 6
-        : multiplier == .7
+        : multiplier == .65
             ? 8
-            : 12;
+            : 10;
     double spaceElement = multiplier == 1.0 ? 1.8 : 1.4;
 
     double fontSize = multiplier == 1.0
         ? 1
-        : multiplier == 0.7
+        : multiplier == 0.65
             ? 1.8
             : 3.86;
 
@@ -216,20 +216,23 @@ class _SchedulePageState extends State<SchedulePage> {
               top: 100,
               left: multiplier == 1.0
                   ? 0 * multiplier
-                  : multiplier == 0.7
-                      ? 50 * multiplier
+                  : multiplier == 0.65
+                      ? 10
                       : 10,
               child: Column(
                 children: [
-                  SizedBox(
-                    width: widthContainer,
-                    height: heightContainer / divisor,
-                    child: Text(
-                      'Horario de Eventos',
-                      style: TextStyle(
-                        fontSize: (65 / fontSize),
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SizedBox(
+                      width: widthContainer,
+                      height: heightContainer / divisor,
+                      child: Text(
+                        'Horario de Eventos',
+                        style: TextStyle(
+                          fontSize: (65 / fontSize),
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
