@@ -181,7 +181,7 @@ class WhatIsPage extends StatelessWidget {
                   ? 18
                   : multiplier == .65
                       ? null
-                      : -35,
+                      : null,
               bottom: multiplier == 1.0
                   ? 18
                   : multiplier == .65
@@ -195,7 +195,7 @@ class WhatIsPage extends StatelessWidget {
                       image: AssetImage(
                         'assets/images/rectangle_1.png',
                       ),
-                      fit: BoxFit.fill,
+                      fit: BoxFit.contain,
                       opacity: .15),
                 ),
               ),
@@ -249,7 +249,7 @@ class WhatIsPage extends StatelessWidget {
                   ? 700
                   : multiplier == .65
                       ? 600
-                      : 323,
+                      : 390,
               left: multiplier == 1
                   ? 700
                   : multiplier == .65
@@ -268,12 +268,12 @@ class WhatIsPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: multiplier == .7 ? 350 : 40,
+              right: multiplier == .65 ? 350 : 40,
               bottom: multiplier == 1.0
                   ? 400
-                  : multiplier == .7
+                  : multiplier == .65
                       ? 550
-                      : 220,
+                      : 350,
               child: Text(
                 '@MANCAVE_AUTOGRAPHS',
                 style: TextStyle(

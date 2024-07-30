@@ -230,7 +230,7 @@ class SellTicket extends StatelessWidget {
                   paragraph,
                   textAlign: TextAlign.left,
                   style: TextStyle(
-                    fontSize: (25 / fontSize),
+                    fontSize: (17 / fontSize),
                   ),
                 ),
               ),

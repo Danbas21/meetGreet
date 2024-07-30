@@ -98,7 +98,7 @@ class RotatableImageCardState extends State<RotatableImageCard>
           AnimatedBuilder(
             animation: _animation,
             builder: (context, child) {
-              final angle = _animation.value * 3.14;
+              final angle = _animation.value * 1;
               return Transform(
                 transform: Matrix4.rotationY(angle),
                 alignment: Alignment.center,

@@ -52,11 +52,13 @@ class _SchedulePageState extends State<SchedulePage> {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12.0)),
             child: SizedBox(
+              width: 400,
+              height: 400,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(12),
                 child: Image.asset(
                   frontImage,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
               ),
             ),
@@ -73,8 +75,8 @@ class _SchedulePageState extends State<SchedulePage> {
         child: Stack(
           children: [
             Positioned(
-              left: -200 * multiplier,
-              bottom: 1000 * multiplier,
+              left: -200,
+              bottom: 1000,
               child: SizedBox(
                 width: 800 * multiplier,
                 height: 800 * multiplier,
@@ -86,23 +88,23 @@ class _SchedulePageState extends State<SchedulePage> {
               ),
             ),
             Positioned(
-              right: 90 * multiplier,
-              bottom: 1000 * multiplier,
+              right: 90,
+              bottom: 1000,
               child: SizedBox(
-                width: 145 * multiplier,
-                height: 80 * multiplier,
+                width: 250 * multiplier,
+                height: 250 * multiplier,
                 child: CirculosEnGrid(),
               ),
             ),
             Positioned(
-              left: -200 * multiplier,
-              bottom: 1100 * multiplier,
+              left: -200,
+              bottom: 1100,
               child: SizedBox(
-                width: 600 * multiplier,
-                height: 600 * multiplier,
+                width: 950 * multiplier,
+                height: 950 * multiplier,
                 child: Circumference3(
-                  widthC: 700 * multiplier,
-                  heightC: 646 * multiplier,
+                  widthC: 900 * multiplier,
+                  heightC: 900 * multiplier,
                   opacity: 225,
                 ),
               ),
@@ -111,21 +113,21 @@ class _SchedulePageState extends State<SchedulePage> {
               right: -250,
               top: 1000,
               child: SizedBox(
-                width: 800 * multiplier,
-                height: 800 * multiplier,
+                width: 950 * multiplier,
+                height: 950 * multiplier,
                 child: Circumference(
-                  widthC: 700 * multiplier,
-                  heightC: 646 * multiplier,
+                  widthC: 900 * multiplier,
+                  heightC: 900 * multiplier,
                   opacity: 100,
                 ),
               ),
             ),
             Positioned(
-              left: 90 * multiplier,
-              top: 950 * multiplier,
+              left: 90,
+              top: 950,
               child: SizedBox(
-                width: 145 * multiplier,
-                height: 80 * multiplier,
+                width: 250 * multiplier,
+                height: 250 * multiplier,
                 child: const CirculosEnGrid(),
               ),
             ),
@@ -133,46 +135,46 @@ class _SchedulePageState extends State<SchedulePage> {
               right: -300,
               top: 1100,
               child: SizedBox(
-                width: 600 * multiplier,
-                height: 600 * multiplier,
+                width: 950 * multiplier,
+                height: 950 * multiplier,
                 child: Circumference3(
-                  widthC: 700 * multiplier,
-                  heightC: 646 * multiplier,
+                  widthC: 900 * multiplier,
+                  heightC: 900 * multiplier,
                   opacity: 225,
                 ),
               ),
             ),
             Positioned(
-              left: -200 * multiplier,
-              top: -250 * multiplier,
+              left: -200,
+              top: -250,
               child: SizedBox(
-                width: 800 * multiplier,
-                height: 800 * multiplier,
+                width: 950 * multiplier,
+                height: 950 * multiplier,
                 child: Circumference(
-                  widthC: 700 * multiplier,
-                  heightC: 646 * multiplier,
+                  widthC: 900 * multiplier,
+                  heightC: 900 * multiplier,
                   opacity: 100,
                 ),
               ),
             ),
             Positioned(
-              right: 90 * multiplier,
-              top: 290 * multiplier,
+              right: 90,
+              top: 290,
               child: SizedBox(
-                width: 145 * multiplier,
-                height: 80 * multiplier,
+                width: 250 * multiplier,
+                height: 250 * multiplier,
                 child: CirculosEnGrid(),
               ),
             ),
             Positioned(
-              left: -200 * multiplier,
-              top: -270 * multiplier,
+              left: -200,
+              top: -270,
               child: SizedBox(
-                width: 600 * multiplier,
-                height: 600 * multiplier,
+                width: 950 * multiplier,
+                height: 950 * multiplier,
                 child: Circumference3(
-                  widthC: 700 * multiplier,
-                  heightC: 646 * multiplier,
+                  widthC: 900 * multiplier,
+                  heightC: 900 * multiplier,
                   opacity: 225,
                 ),
               ),
@@ -181,27 +183,27 @@ class _SchedulePageState extends State<SchedulePage> {
               right: -200 * multiplier,
               bottom: -250 * multiplier,
               child: SizedBox(
-                width: 800 * multiplier,
-                height: 800 * multiplier,
+                width: 950 * multiplier,
+                height: 950 * multiplier,
                 child: Circumference(
-                  widthC: 700 * multiplier,
-                  heightC: 646 * multiplier,
+                  widthC: 900 * multiplier,
+                  heightC: 900 * multiplier,
                   opacity: 100,
                 ),
               ),
             ),
             Positioned(
-              left: 90 * multiplier,
-              bottom: 290 * multiplier,
+              left: 90,
+              bottom: 290,
               child: SizedBox(
-                width: 145 * multiplier,
-                height: 80 * multiplier,
+                width: 250 * multiplier,
+                height: 250 * multiplier,
                 child: const CirculosEnGrid(),
               ),
             ),
             Positioned(
-              right: -200 * multiplier,
-              bottom: -270 * multiplier,
+              right: -200,
+              bottom: -270,
               child: SizedBox(
                 width: 600 * multiplier,
                 height: 600 * multiplier,
@@ -213,36 +215,31 @@ class _SchedulePageState extends State<SchedulePage> {
               ),
             ),
             Positioned(
-              top: 100,
+              top: 90,
               left: multiplier == 1.0
-                  ? 0 * multiplier
+                  ? 0
                   : multiplier == 0.65
                       ? 10
-                      : 10,
+                      : 1,
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: SizedBox(
-                      width: widthContainer,
-                      height: heightContainer / divisor,
-                      child: Text(
-                        'Horario de Eventos',
-                        style: TextStyle(
-                          fontSize: (65 / fontSize),
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                        ),
+                  SizedBox(
+                    width: widthContainer,
+                    height: heightContainer / divisor,
+                    child: Text(
+                      'Horario de Eventos',
+                      style: TextStyle(
+                        fontSize: (65 / fontSize),
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
                   Container(
-                    margin: const EdgeInsets.all(2),
                     width: widthContainer,
                     height: heightContainer,
                     child: Stack(children: [
                       Container(
-                        margin: const EdgeInsets.all(2),
                         width: widthContainer,
                         height: heightContainer,
                         child: Image.asset('assets/images/horarios1.jpg',
@@ -262,12 +259,10 @@ class _SchedulePageState extends State<SchedulePage> {
                     ]),
                   ),
                   Container(
-                    margin: const EdgeInsets.all(2),
                     width: widthContainer,
                     height: heightContainer,
                     child: Stack(children: [
                       Container(
-                        margin: const EdgeInsets.all(2),
                         width: widthContainer,
                         height: heightContainer,
                         child: Image.asset('assets/images/horarios2.jpg',
@@ -290,11 +285,11 @@ class _SchedulePageState extends State<SchedulePage> {
               ),
             ),
             Positioned(
-              right: 0 * multiplier,
-              top: 0 * multiplier,
+              right: 0,
+              top: 0,
               child: SizedBox(
-                width: 850 * multiplier,
-                height: 90 * multiplier * multiplier,
+                width: 1000 * multiplier,
+                height: 1000 * multiplier * multiplier,
                 child: const BarNaviv(),
               ),
             ),
